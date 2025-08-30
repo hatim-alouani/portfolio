@@ -16,6 +16,9 @@ import {
   Linkedin,
   Menu,
   X,
+  GraduationCap,
+  Award,
+  Calendar,
 } from "lucide-react"
 import { useState, useEffect } from "react"
 
@@ -30,6 +33,26 @@ export default function Portfolio() {
   }
 
   useEffect(() => {
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: "0px 0px -50px 0px",
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("revealed")
+        }
+      })
+    }, observerOptions)
+
+    const scrollElements = document.querySelectorAll(".scroll-reveal")
+    scrollElements.forEach((el) => observer.observe(el))
+
+    return () => observer.disconnect()
+  }, [])
+
+  useEffect(() => {
     const handleScroll = () => {
       const sections = ["hero", "education", "skills", "projects", "certificates", "contact"]
       const scrollPosition = window.scrollY
@@ -37,7 +60,7 @@ export default function Portfolio() {
       for (const section of sections) {
         const element = document.getElementById(section)
         if (element) {
-          const elementTop = element.offsetTop - 50 // Adjust offset as needed
+          const elementTop = element.offsetTop - 50
           const elementBottom = elementTop + element.offsetHeight
 
           if (scrollPosition >= elementTop && scrollPosition < elementBottom) {
@@ -54,8 +77,7 @@ export default function Portfolio() {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Navigation Bar */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-xl border-b border-primary/20">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16">
             <div className="font-bold text-xl">Hatim Alouani</div>
@@ -199,41 +221,40 @@ export default function Portfolio() {
         </div>
       </nav>
 
-      {/* Hero Section */}
-      <section
-        id="hero"
-        className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-muted/50 to-background pt-16"
-      >
-        <div className="container mx-auto px-4 py-20">
-          <div className="max-w-4xl mx-auto text-center">
+      <section id="hero" className="relative min-h-screen flex items-center justify-center bg-background pt-16">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5"></div>
+        <div className="container mx-auto px-4 py-20 relative z-10">
+          <div className="max-w-4xl mx-auto text-center scroll-reveal">
             {/* Profile Photo */}
             <div className="mb-8">
               <img
-                src="/images/hatim-profile.png"
+                src="/images/hatim-profile-new.png"
                 alt="Alouani Hatim"
-                className="w-48 h-48 lg:w-56 lg:h-56 rounded-full mx-auto object-cover border-4 border-primary/20 shadow-2xl hover:scale-105 transition-transform duration-300"
+                className="w-48 h-48 lg:w-56 lg:h-56 rounded-full mx-auto object-cover border-4 border-primary/30 shadow-2xl hover:scale-105 transition-all duration-500 animate-glow"
               />
             </div>
 
             {/* Main Heading */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4 text-balance">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4 text-balance animate-fade-in-up">
               Alouani Hatim
             </h1>
 
             {/* Subtitle */}
-            <p className="text-xl md:text-2xl text-primary font-semibold mb-4">AI & Software Engineering Student</p>
+            <p className="text-xl md:text-2xl text-primary font-semibold mb-4 animate-fade-in-up">
+              AI & Software Engineering Student
+            </p>
 
             {/* Description */}
-            <p className="text-lg text-muted-foreground mb-6 text-pretty max-w-3xl mx-auto">
+            <p className="text-lg text-muted-foreground mb-6 text-pretty max-w-3xl mx-auto animate-fade-in-up">
               AI and Software Engineering student at 1337 Coding School | 42 Network, passionate about building scalable
               systems and intelligent solutions, with a strong focus on Machine Learning, Deep Learning, NLP, and Big
               Data, complemented by hands-on web development knowledge.
             </p>
 
             {/* Age and Location */}
-            <div className="flex flex-wrap justify-center gap-4 mb-6 text-sm text-muted-foreground">
+            <div className="flex flex-wrap justify-center gap-4 mb-6 text-sm text-muted-foreground animate-slide-in-left">
               <div className="flex items-center gap-2">
-                <div className="w-2 h-2 rounded-full bg-primary"></div>
+                <div className="w-2 h-2 rounded-full bg-primary animate-pulse"></div>
                 <span>22 years old</span>
               </div>
               <div className="flex items-center gap-2">
@@ -243,25 +264,25 @@ export default function Portfolio() {
             </div>
 
             {/* Languages */}
-            <div className="flex justify-center gap-2 mb-8">
-              <Badge variant="secondary" className="hover:bg-primary/20 transition-colors">
+            <div className="flex justify-center gap-2 mb-8 animate-slide-in-right">
+              <Badge variant="secondary" className="hover:bg-primary/20 transition-colors border border-primary/20">
                 English
               </Badge>
-              <Badge variant="secondary" className="hover:bg-primary/20 transition-colors">
+              <Badge variant="secondary" className="hover:bg-primary/20 transition-colors border border-primary/20">
                 French
               </Badge>
-              <Badge variant="secondary" className="hover:bg-primary/20 transition-colors">
+              <Badge variant="secondary" className="hover:bg-primary/20 transition-colors border border-primary/20">
                 Arabic
               </Badge>
             </div>
 
-            <div className="mb-8">{/* Empty space in green as requested */}</div>
+            <div className="mb-8">{/* Empty space as requested */}</div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up">
               <Button
                 size="lg"
-                className="text-lg px-8 hover:scale-105 transition-transform"
+                className="text-lg px-8 hover:scale-105 transition-all duration-300 bg-primary hover:bg-primary/90 shadow-lg hover:shadow-primary/25"
                 onClick={() => scrollToSection("projects")}
               >
                 View My Work
@@ -269,7 +290,23 @@ export default function Portfolio() {
               <Button
                 variant="outline"
                 size="lg"
-                className="text-lg px-8 bg-transparent hover:scale-105 transition-transform"
+                className="text-lg px-8 bg-transparent hover:scale-105 transition-all duration-300 border-primary/30 hover:border-primary hover:bg-primary/10"
+                onClick={() => {
+                  const link = document.createElement("a")
+                  link.href = "/Hatim_Alouani_CV.pdf"
+                  link.download = "Hatim_Alouani_CV.pdf"
+                  document.body.appendChild(link)
+                  link.click()
+                  document.body.removeChild(link)
+                }}
+              >
+                <ExternalLink className="w-5 h-5 mr-2" />
+                Download CV
+              </Button>
+              <Button
+                variant="outline"
+                size="lg"
+                className="text-lg px-8 bg-transparent hover:scale-105 transition-all duration-300 border-primary/30 hover:border-primary hover:bg-primary/10"
                 asChild
               >
                 <a href="https://github.com/hatim-alouani" target="_blank" rel="noopener noreferrer">
@@ -282,490 +319,554 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* About & Education Section */}
-      <section id="education" className="py-20 bg-muted/30">
-        <div className="container mx-auto px-4">
+      <section id="education" className="py-20 bg-background">
+        <div className="absolute inset-0 bg-gradient-to-br from-accent/5 via-transparent to-primary/5"></div>
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-balance">Education</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-balance scroll-reveal">
+              <GraduationCap className="w-10 h-10 mx-auto mb-4 text-primary" />
+              Education Journey
+            </h2>
 
-            <div className="space-y-6">
+            <div className="space-y-8">
               {/* 1337 Coding School */}
-              <Card className="hover:shadow-lg transition-shadow duration-300">
-                <CardContent className="p-6">
-                  <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-                    <div>
-                      <h3 className="text-xl font-semibold">1337 Coding School – Common Core</h3>
-                      <p className="text-primary font-medium">Software Engineering Program</p>
+              <div className="scroll-reveal">
+                <Card className="gradient-frame hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 hover:scale-[1.02] group">
+                  <CardContent className="p-8">
+                    <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6">
+                      <div className="flex items-start gap-4">
+                        <div className="p-3 rounded-full bg-primary/10 border border-primary/20 group-hover:bg-primary/20 transition-colors">
+                          <Code className="w-6 h-6 text-primary" />
+                        </div>
+                        <div>
+                          <h3 className="text-2xl font-bold text-primary mb-1">1337 Coding School – Common Core</h3>
+                          <p className="text-lg font-semibold text-accent mb-2">Software Engineering Program</p>
+                          <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                            <Calendar className="w-4 h-4" />
+                            <span>2023 – Present</span>
+                          </div>
+                        </div>
+                      </div>
+                      <Badge
+                        variant="outline"
+                        className="w-fit mt-4 lg:mt-0 border-primary/30 text-primary bg-primary/5"
+                      >
+                        In Progress
+                      </Badge>
                     </div>
-                    <Badge variant="outline" className="w-fit mt-2 md:mt-0">
-                      2023–Present
-                    </Badge>
-                  </div>
-                  <p className="text-muted-foreground">
-                    Intensive software engineering program focusing on system programming, algorithms, and full-stack
-                    development. Part of the prestigious 42 Network with peer-to-peer learning methodology.
-                  </p>
-                </CardContent>
-              </Card>
+                    <p className="text-muted-foreground leading-relaxed">
+                      Intensive software engineering program focusing on system programming, algorithms, and full-stack
+                      development. Part of the prestigious 42 Network with peer-to-peer learning methodology and
+                      project-based curriculum.
+                    </p>
+                    <div className="flex flex-wrap gap-2 mt-4">
+                      <Badge variant="secondary" className="bg-primary/10 text-primary border-primary/20">
+                        C Programming
+                      </Badge>
+                      <Badge variant="secondary" className="bg-primary/10 text-primary border-primary/20">
+                        System Programming
+                      </Badge>
+                      <Badge variant="secondary" className="bg-primary/10 text-primary border-primary/20">
+                        42 Network
+                      </Badge>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
 
               {/* Bachelor's Degree */}
-              <Card className="hover:shadow-lg transition-shadow duration-300">
-                <CardContent className="p-6">
-                  <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-                    <div>
-                      <h3 className="text-xl font-semibold">Bachelor's in Information Systems & AI</h3>
-                      <p className="text-primary font-medium">Computer Science & Artificial Intelligence</p>
+              <div className="scroll-reveal">
+                <Card className="gradient-frame hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 hover:scale-[1.02] group">
+                  <CardContent className="p-8">
+                    <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6">
+                      <div className="flex items-start gap-4">
+                        <div className="p-3 rounded-full bg-accent/10 border border-accent/20 group-hover:bg-accent/20 transition-colors">
+                          <Brain className="w-6 h-6 text-accent" />
+                        </div>
+                        <div>
+                          <h3 className="text-2xl font-bold text-primary mb-1">
+                            Bachelor's in Information Systems & AI
+                          </h3>
+                          <p className="text-lg font-semibold text-accent mb-2">
+                            Computer Science & Artificial Intelligence
+                          </p>
+                          <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                            <Calendar className="w-4 h-4" />
+                            <span>2021 – 2025</span>
+                          </div>
+                        </div>
+                      </div>
+                      <Badge variant="outline" className="w-fit mt-4 lg:mt-0 border-accent/30 text-accent bg-accent/5">
+                        Completed
+                      </Badge>
                     </div>
-                    <Badge variant="outline" className="w-fit mt-2 md:mt-0">
-                      2021–2025
-                    </Badge>
-                  </div>
-                  <p className="text-muted-foreground">
-                    Specialized in Computer Science, Artificial Intelligence, Big Data, and Advanced Data Analytics with
-                    comprehensive theoretical and practical knowledge.
-                  </p>
-                </CardContent>
-              </Card>
+                    <p className="text-muted-foreground leading-relaxed">
+                      Specialized in Computer Science, Artificial Intelligence, Big Data, and Advanced Data Analytics
+                      with comprehensive theoretical and practical knowledge in machine learning and data science.
+                    </p>
+                    <div className="flex flex-wrap gap-2 mt-4">
+                      <Badge variant="secondary" className="bg-accent/10 text-accent border-accent/20">
+                        Artificial Intelligence
+                      </Badge>
+                      <Badge variant="secondary" className="bg-accent/10 text-accent border-accent/20">
+                        Big Data
+                      </Badge>
+                      <Badge variant="secondary" className="bg-accent/10 text-accent border-accent/20">
+                        Data Analytics
+                      </Badge>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
 
               {/* Baccalaureate */}
-              <Card className="hover:shadow-lg transition-shadow duration-300">
-                <CardContent className="p-6">
-                  <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-                    <div>
-                      <h3 className="text-xl font-semibold">Baccalaureate in Physical Sciences</h3>
-                      <p className="text-primary font-medium">Scientific Track</p>
+              <div className="scroll-reveal">
+                <Card className="gradient-frame hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 hover:scale-[1.02] group">
+                  <CardContent className="p-8">
+                    <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6">
+                      <div className="flex items-start gap-4">
+                        <div className="p-3 rounded-full bg-chart-3/10 border border-chart-3/20 group-hover:bg-chart-3/20 transition-colors">
+                          <Award className="w-6 h-6 text-chart-3" />
+                        </div>
+                        <div>
+                          <h3 className="text-2xl font-bold text-primary mb-1">Baccalaureate in Physical Sciences</h3>
+                          <p className="text-lg font-semibold text-accent mb-2">Scientific Track</p>
+                          <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                            <Calendar className="w-4 h-4" />
+                            <span>2020 – 2021</span>
+                          </div>
+                        </div>
+                      </div>
+                      <Badge
+                        variant="outline"
+                        className="w-fit mt-4 lg:mt-0 border-chart-3/30 text-chart-3 bg-chart-3/5"
+                      >
+                        Completed
+                      </Badge>
                     </div>
-                    <Badge variant="outline" className="w-fit mt-2 md:mt-0">
-                      2020–2021
-                    </Badge>
-                  </div>
-                  <p className="text-muted-foreground">
-                    Strong foundation in mathematics, physics, and scientific methodology, providing the analytical
-                    skills essential for computer science and engineering.
-                  </p>
-                </CardContent>
-              </Card>
+                    <p className="text-muted-foreground leading-relaxed">
+                      Strong foundation in mathematics, physics, and scientific methodology, providing the analytical
+                      skills essential for computer science and engineering disciplines.
+                    </p>
+                    <div className="flex flex-wrap gap-2 mt-4">
+                      <Badge variant="secondary" className="bg-chart-3/10 text-chart-3 border-chart-3/20">
+                        Mathematics
+                      </Badge>
+                      <Badge variant="secondary" className="bg-chart-3/10 text-chart-3 border-chart-3/20">
+                        Physics
+                      </Badge>
+                      <Badge variant="secondary" className="bg-chart-3/10 text-chart-3 border-chart-3/20">
+                        Scientific Method
+                      </Badge>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Technical Skills */}
-      <section id="skills" className="py-20">
-        <div className="container mx-auto px-4">
+      <section id="skills" className="py-20 bg-background">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5"></div>
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-balance">Technical Skills</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-balance scroll-reveal">
+              Technical Skills
+            </h2>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {/* Programming Languages */}
-              <Card className="group hover:shadow-xl hover:scale-105 transition-all duration-300 border-l-4 border-l-primary/50">
-                <CardContent className="p-6">
-                  <div className="flex items-center mb-4">
-                    <Code className="w-8 h-8 mr-3 text-primary group-hover:scale-110 transition-transform duration-300" />
-                    <h3 className="text-lg font-semibold">Programming Languages</h3>
-                  </div>
-                  <div className="flex flex-wrap gap-2">
-                    <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default">C</Badge>
-                    <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default">C++</Badge>
-                    <Badge
-                      variant="secondary"
-                      className="hover:bg-green-100 hover:text-green-700 transition-colors duration-200 cursor-default"
-                    >
-                      Python
-                    </Badge>
-                    <Badge
-                      variant="secondary"
-                      className="hover:bg-green-100 hover:text-green-700 transition-colors duration-200 cursor-default"
-                    >
-                      Shell Scripting
-                    </Badge>
-                    <Badge
-                      variant="secondary"
-                      className="hover:bg-green-100 hover:text-green-700 transition-colors duration-200 cursor-default"
-                    >
-                      SQL
-                    </Badge>
-                  </div>
-                </CardContent>
-              </Card>
+              <div className="scroll-reveal">
+                <Card className="group hover:shadow-xl hover:scale-105 transition-all duration-300 border-l-4 border-l-primary/50 gradient-frame min-h-[200px] flex flex-col">
+                  <CardContent className="p-6 flex-1 flex flex-col">
+                    <div className="flex items-center mb-4">
+                      <Code className="w-8 h-8 mr-3 text-primary group-hover:scale-110 transition-transform duration-300" />
+                      <h3 className="text-lg font-semibold">Programming Languages</h3>
+                    </div>
+                    <div className="flex flex-wrap gap-2 flex-1">
+                      <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-primary text-primary-foreground min-w-[80px] text-center">
+                        C
+                      </Badge>
+                      <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-primary text-primary-foreground min-w-[80px] text-center">
+                        C++
+                      </Badge>
+                      <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
+                        Python
+                      </Badge>
+                      <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
+                        Shell Scripting
+                      </Badge>
+                      <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
+                        SQL
+                      </Badge>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
 
               {/* AI & Machine Learning */}
-              <Card className="group hover:shadow-xl hover:scale-105 transition-all duration-300 border-l-4 border-l-blue-500/50">
-                <CardContent className="p-6">
-                  <div className="flex items-center mb-4">
-                    <Brain className="w-8 h-8 mr-3 text-blue-500 group-hover:scale-110 transition-transform duration-300" />
-                    <h3 className="text-lg font-semibold">AI & Machine Learning</h3>
-                  </div>
-                  <div className="flex flex-wrap gap-2">
-                    <Badge
-                      variant="secondary"
-                      className="hover:bg-blue-100 hover:text-blue-700 transition-colors duration-200 cursor-default"
-                    >
-                      TensorFlow
-                    </Badge>
-                    <Badge
-                      variant="secondary"
-                      className="hover:bg-blue-100 hover:text-blue-700 transition-colors duration-200 cursor-default"
-                    >
-                      Scikit-learn
-                    </Badge>
-                    <Badge
-                      variant="secondary"
-                      className="hover:bg-blue-100 hover:text-blue-700 transition-colors duration-200 cursor-default"
-                    >
-                      Pandas
-                    </Badge>
-                    <Badge
-                      variant="secondary"
-                      className="hover:bg-blue-100 hover:text-blue-700 transition-colors duration-200 cursor-default"
-                    >
-                      Matplotlib
-                    </Badge>
-                  </div>
-                </CardContent>
-              </Card>
+              <div className="scroll-reveal">
+                <Card className="group hover:shadow-xl hover:scale-105 transition-all duration-300 border-l-4 border-l-blue-500/50 gradient-frame min-h-[200px] flex flex-col">
+                  <CardContent className="p-6 flex-1 flex flex-col">
+                    <div className="flex items-center mb-4">
+                      <Brain className="w-8 h-8 mr-3 text-blue-500 group-hover:scale-110 transition-transform duration-300" />
+                      <h3 className="text-lg font-semibold">AI & Machine Learning</h3>
+                    </div>
+                    <div className="flex flex-wrap gap-2 flex-1">
+                      <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
+                        TensorFlow
+                      </Badge>
+                      <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
+                        Scikit-learn
+                      </Badge>
+                      <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
+                        Pandas
+                      </Badge>
+                      <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
+                        Matplotlib
+                      </Badge>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
 
               {/* NLP & Text Processing */}
-              <Card className="group hover:shadow-xl hover:scale-105 transition-all duration-300 border-l-4 border-l-purple-500/50">
-                <CardContent className="p-6">
-                  <div className="flex items-center mb-4">
-                    <Brain className="w-8 h-8 mr-3 text-purple-500 group-hover:scale-110 transition-transform duration-300" />
-                    <h3 className="text-lg font-semibold">NLP & Text Processing</h3>
-                  </div>
-                  <div className="flex flex-wrap gap-2">
-                    <Badge
-                      variant="secondary"
-                      className="hover:bg-purple-100 hover:text-purple-700 transition-colors duration-200 cursor-default"
-                    >
-                      SpaCy
-                    </Badge>
-                    <Badge
-                      variant="secondary"
-                      className="hover:bg-purple-100 hover:text-purple-700 transition-colors duration-200 cursor-default"
-                    >
-                      NLTK
-                    </Badge>
-                    <Badge
-                      variant="secondary"
-                      className="hover:bg-purple-100 hover:text-purple-700 transition-colors duration-200 cursor-default"
-                    >
-                      TF-IDF
-                    </Badge>
-                    <Badge
-                      variant="secondary"
-                      className="hover:bg-purple-100 hover:text-purple-700 transition-colors duration-200 cursor-default"
-                    >
-                      Sentiment Analysis
-                    </Badge>
-                  </div>
-                </CardContent>
-              </Card>
+              <div className="scroll-reveal">
+                <Card className="group hover:shadow-xl hover:scale-105 transition-all duration-300 border-l-4 border-l-purple-500/50 gradient-frame min-h-[200px] flex flex-col">
+                  <CardContent className="p-6 flex-1 flex flex-col">
+                    <div className="flex items-center mb-4">
+                      <Brain className="w-8 h-8 mr-3 text-purple-500 group-hover:scale-110 transition-transform duration-300" />
+                      <h3 className="text-lg font-semibold">NLP & Text Processing</h3>
+                    </div>
+                    <div className="flex flex-wrap gap-2 flex-1">
+                      <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
+                        SpaCy
+                      </Badge>
+                      <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
+                        NLTK
+                      </Badge>
+                      <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
+                        TF-IDF
+                      </Badge>
+                      <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
+                        Sentiment Analysis
+                      </Badge>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
 
               {/* Big Data & Analytics */}
-              <Card className="group hover:shadow-xl hover:scale-105 transition-all duration-300 border-l-4 border-l-orange-500/50">
-                <CardContent className="p-6">
-                  <div className="flex items-center mb-4">
-                    <Server className="w-8 h-8 mr-3 text-orange-500 group-hover:scale-110 transition-transform duration-300" />
-                    <h3 className="text-lg font-semibold">Big Data & Analytics</h3>
-                  </div>
-                  <div className="flex flex-wrap gap-2">
-                    <Badge
-                      variant="secondary"
-                      className="hover:bg-orange-100 hover:text-orange-700 transition-colors duration-200 cursor-default"
-                    >
-                      Spark
-                    </Badge>
-                    <Badge
-                      variant="secondary"
-                      className="hover:bg-orange-100 hover:text-orange-700 transition-colors duration-200 cursor-default"
-                    >
-                      Hadoop
-                    </Badge>
-                    <Badge
-                      variant="secondary"
-                      className="hover:bg-orange-100 hover:text-orange-700 transition-colors duration-200 cursor-default"
-                    >
-                      Kafka
-                    </Badge>
-                    <Badge
-                      variant="secondary"
-                      className="hover:bg-orange-100 hover:text-orange-700 transition-colors duration-200 cursor-default"
-                    >
-                      PySpark
-                    </Badge>
-                  </div>
-                </CardContent>
-              </Card>
+              <div className="scroll-reveal">
+                <Card className="group hover:shadow-xl hover:scale-105 transition-all duration-300 border-l-4 border-l-orange-500/50 gradient-frame min-h-[200px] flex flex-col">
+                  <CardContent className="p-6 flex-1 flex flex-col">
+                    <div className="flex items-center mb-4">
+                      <Server className="w-8 h-8 mr-3 text-orange-500 group-hover:scale-110 transition-transform duration-300" />
+                      <h3 className="text-lg font-semibold">Big Data & Analytics</h3>
+                    </div>
+                    <div className="flex flex-wrap gap-2 flex-1">
+                      <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
+                        Spark
+                      </Badge>
+                      <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
+                        Hadoop
+                      </Badge>
+                      <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
+                        Kafka
+                      </Badge>
+                      <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
+                        PySpark
+                      </Badge>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
 
               {/* Databases */}
-              <Card className="group hover:shadow-xl hover:scale-105 transition-all duration-300 border-l-4 border-l-green-500/50">
-                <CardContent className="p-6">
-                  <div className="flex items-center mb-4">
-                    <Database className="w-8 h-8 mr-3 text-green-500 group-hover:scale-110 transition-transform duration-300" />
-                    <h3 className="text-lg font-semibold">Databases</h3>
-                  </div>
-                  <div className="flex flex-wrap gap-2">
-                    <Badge
-                      variant="secondary"
-                      className="hover:bg-green-100 hover:text-green-700 transition-colors duration-200 cursor-default"
-                    >
-                      PostgreSQL
-                    </Badge>
-                    <Badge
-                      variant="secondary"
-                      className="hover:bg-green-100 hover:text-green-700 transition-colors duration-200 cursor-default"
-                    >
-                      MySQL
-                    </Badge>
-                    <Badge
-                      variant="secondary"
-                      className="hover:bg-green-100 hover:text-green-700 transition-colors duration-200 cursor-default"
-                    >
-                      Redis
-                    </Badge>
-                    <Badge
-                      variant="secondary"
-                      className="hover:bg-green-100 hover:text-green-700 transition-colors duration-200 cursor-default"
-                    >
-                      Cassandra
-                    </Badge>
-                    <Badge
-                      variant="secondary"
-                      className="hover:bg-green-100 hover:text-green-700 transition-colors duration-200 cursor-default"
-                    >
-                      HBase
-                    </Badge>
-                    <Badge
-                      variant="secondary"
-                      className="hover:bg-green-100 hover:text-green-700 transition-colors duration-200 cursor-default"
-                    >
-                      MariaDB
-                    </Badge>
-                  </div>
-                </CardContent>
-              </Card>
+              <div className="scroll-reveal">
+                <Card className="group hover:shadow-xl hover:scale-105 transition-all duration-300 border-l-4 border-l-green-500/50 gradient-frame min-h-[200px] flex flex-col">
+                  <CardContent className="p-6 flex-1 flex flex-col">
+                    <div className="flex items-center mb-4">
+                      <Database className="w-8 h-8 mr-3 text-green-500 group-hover:scale-110 transition-transform duration-300" />
+                      <h3 className="text-lg font-semibold">Databases</h3>
+                    </div>
+                    <div className="flex flex-wrap gap-2 flex-1">
+                      <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
+                        PostgreSQL
+                      </Badge>
+                      <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
+                        MySQL
+                      </Badge>
+                      <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
+                        Redis
+                      </Badge>
+                      <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
+                        Cassandra
+                      </Badge>
+                      <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
+                        HBase
+                      </Badge>
+                      <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
+                        MariaDB
+                      </Badge>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
 
               {/* DevOps & Tools */}
-              <Card className="group hover:shadow-xl hover:scale-105 transition-all duration-300 border-l-4 border-l-red-500/50">
-                <CardContent className="p-6">
-                  <div className="flex items-center mb-4">
-                    <Server className="w-8 h-8 mr-3 text-red-500 group-hover:scale-110 transition-transform duration-300" />
-                    <h3 className="text-lg font-semibold">DevOps & Tools</h3>
-                  </div>
-                  <div className="flex flex-wrap gap-2">
-                    <Badge>Git</Badge>
-                    <Badge>Docker</Badge>
-                    <Badge>Nginx</Badge>
-                    <Badge>Grafana</Badge>
-                    <Badge>Prometheus</Badge>
-                  </div>
-                </CardContent>
-              </Card>
+              <div className="scroll-reveal">
+                <Card className="group hover:shadow-xl hover:scale-105 transition-all duration-300 border-l-4 border-l-red-500/50 gradient-frame min-h-[200px] flex flex-col">
+                  <CardContent className="p-6 flex-1 flex flex-col">
+                    <div className="flex items-center mb-4">
+                      <Server className="w-8 h-8 mr-3 text-red-500 group-hover:scale-110 transition-transform duration-300" />
+                      <h3 className="text-lg font-semibold">DevOps & Tools</h3>
+                    </div>
+                    <div className="flex flex-wrap gap-2 flex-1">
+                      <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
+                        Git
+                      </Badge>
+                      <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
+                        Docker
+                      </Badge>
+                      <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
+                        Nginx
+                      </Badge>
+                      <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
+                        Grafana
+                      </Badge>
+                      <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
+                        Prometheus
+                      </Badge>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
             </div>
+
+            {/* Add more skills as needed */}
           </div>
         </div>
       </section>
 
-      {/* Projects Showcase */}
-      <section id="projects" className="py-20 bg-muted/30">
-        <div className="container mx-auto px-4">
+      <section id="projects" className="py-20 bg-background">
+        <div className="absolute inset-0 bg-gradient-to-br from-accent/5 via-transparent to-primary/5"></div>
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-balance">Featured Projects</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-balance scroll-reveal">
+              Featured Projects
+            </h2>
 
             <div className="grid md:grid-cols-2 gap-8">
               {/* Freelance WordPress Project */}
-              <Card className="group hover:shadow-lg transition-shadow">
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold mb-3">Annialux Website</h3>
-                  <p className="text-muted-foreground mb-4 text-pretty">
-                    Developed a professional WordPress website for a luxury client, featuring custom design, responsive
-                    layout, and optimized performance for business growth.
-                  </p>
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    <Badge>WordPress</Badge>
-                    <Badge>PHP</Badge>
-                    <Badge>Custom Design</Badge>
-                    <Badge>Freelance</Badge>
-                  </div>
-                  <Button variant="outline" size="sm" asChild>
-                    <a href="https://annialux.com" target="_blank" rel="noopener noreferrer">
-                      <ExternalLink className="w-4 h-4 mr-2" />
-                      View Live Site
-                    </a>
-                  </Button>
-                </CardContent>
-              </Card>
+              <div className="scroll-reveal">
+                <Card className="group hover:shadow-lg transition-shadow gradient-frame">
+                  <CardContent className="p-6">
+                    <h3 className="text-xl font-semibold mb-3">Annialux Website</h3>
+                    <p className="text-muted-foreground mb-4 text-pretty">
+                      Developed a professional WordPress website for a luxury client, featuring custom design,
+                      responsive layout, and optimized performance for business growth.
+                    </p>
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      <Badge>WordPress</Badge>
+                      <Badge>PHP</Badge>
+                      <Badge>Custom Design</Badge>
+                      <Badge>Freelance</Badge>
+                    </div>
+                    <Button variant="outline" size="sm" asChild>
+                      <a href="https://annialux.com" target="_blank" rel="noopener noreferrer">
+                        <ExternalLink className="w-4 h-4 mr-2" />
+                        View Live Site
+                      </a>
+                    </Button>
+                  </CardContent>
+                </Card>
+              </div>
 
               {/* Minishell */}
-              <Card className="group hover:shadow-lg transition-shadow">
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold mb-3">Minishell</h3>
-                  <p className="text-muted-foreground mb-4 text-pretty">
-                    Built a Unix-like shell in C for process control and command execution, implementing core shell
-                    functionalities and system programming concepts.
-                  </p>
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    <Badge>C</Badge>
-                    <Badge>Unix</Badge>
-                    <Badge>System Programming</Badge>
-                  </div>
-                  <Button variant="outline" size="sm" asChild>
-                    <a
-                      href="https://github.com/hatim-alouani/Minishell-42cursus"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <Github className="w-4 h-4 mr-2" />
-                      View on GitHub
-                    </a>
-                  </Button>
-                </CardContent>
-              </Card>
+              <div className="scroll-reveal">
+                <Card className="group hover:shadow-lg transition-shadow gradient-frame">
+                  <CardContent className="p-6">
+                    <h3 className="text-xl font-semibold mb-3">Minishell</h3>
+                    <p className="text-muted-foreground mb-4 text-pretty">
+                      Built a Unix-like shell in C for process control and command execution, implementing core shell
+                      functionalities and system programming concepts.
+                    </p>
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      <Badge>C</Badge>
+                      <Badge>Unix</Badge>
+                      <Badge>System Programming</Badge>
+                    </div>
+                    <Button variant="outline" size="sm" asChild>
+                      <a
+                        href="https://github.com/hatim-alouani/Minishell-42cursus"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Github className="w-4 h-4 mr-2" />
+                        View on GitHub
+                      </a>
+                    </Button>
+                  </CardContent>
+                </Card>
+              </div>
 
               {/* Inception */}
-              <Card className="group hover:shadow-lg transition-shadow">
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold mb-3">Inception</h3>
-                  <p className="text-muted-foreground mb-4 text-pretty">
-                    Designed and deployed a secure and scalable web infrastructure using Docker, with NGINX, WordPress,
-                    and MariaDB in a containerized environment.
-                  </p>
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    <Badge>Docker</Badge>
-                    <Badge>NGINX</Badge>
-                    <Badge>WordPress</Badge>
-                    <Badge>MariaDB</Badge>
-                  </div>
-                  <Button variant="outline" size="sm" asChild>
-                    <a
-                      href="https://github.com/hatim-alouani/Inception-42Cursus"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <Github className="w-4 h-4 mr-2" />
-                      View on GitHub
-                    </a>
-                  </Button>
-                </CardContent>
-              </Card>
+              <div className="scroll-reveal">
+                <Card className="group hover:shadow-lg transition-shadow gradient-frame">
+                  <CardContent className="p-6">
+                    <h3 className="text-xl font-semibold mb-3">Inception</h3>
+                    <p className="text-muted-foreground mb-4 text-pretty">
+                      Designed and deployed a secure and scalable web infrastructure using Docker, with NGINX,
+                      WordPress, and MariaDB in a containerized environment.
+                    </p>
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      <Badge>Docker</Badge>
+                      <Badge>NGINX</Badge>
+                      <Badge>WordPress</Badge>
+                      <Badge>MariaDB</Badge>
+                    </div>
+                    <Button variant="outline" size="sm" asChild>
+                      <a
+                        href="https://github.com/hatim-alouani/Inception-42Cursus"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Github className="w-4 h-4 mr-2" />
+                        View on GitHub
+                      </a>
+                    </Button>
+                  </CardContent>
+                </Card>
+              </div>
 
               {/* Product Recommendation Engine */}
-              <Card className="group hover:shadow-lg transition-shadow">
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold mb-3">Courses Recommendation System</h3>
-                  <p className="text-muted-foreground mb-4 text-pretty">
-                    Implemented a personalized course recommendation system using Big Data tools, Hadoop, PySpark with
-                    ALS algorithm, and Cassandra for scalable data processing.
-                  </p>
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    <Badge>Hadoop</Badge>
-                    <Badge>PySpark</Badge>
-                    <Badge>Cassandra</Badge>
-                    <Badge>Flask</Badge>
-                  </div>
-                  <Button variant="outline" size="sm" asChild>
-                    <a
-                      href="https://github.com/hatim-alouani/Courses-Recommendation-System"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <Github className="w-4 h-4 mr-2" />
-                      View on GitHub
-                    </a>
-                  </Button>
-                </CardContent>
-              </Card>
+              <div className="scroll-reveal">
+                <Card className="group hover:shadow-lg transition-shadow gradient-frame">
+                  <CardContent className="p-6">
+                    <h3 className="text-xl font-semibold mb-3">Courses Recommendation System</h3>
+                    <p className="text-muted-foreground mb-4 text-pretty">
+                      Implemented a personalized course recommendation system using Big Data tools, Hadoop, PySpark with
+                      ALS algorithm, and Cassandra for scalable data processing.
+                    </p>
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      <Badge>Hadoop</Badge>
+                      <Badge>PySpark</Badge>
+                      <Badge>Cassandra</Badge>
+                      <Badge>Flask</Badge>
+                    </div>
+                    <Button variant="outline" size="sm" asChild>
+                      <a
+                        href="https://github.com/hatim-alouani/Courses-Recommendation-System"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Github className="w-4 h-4 mr-2" />
+                        View on GitHub
+                      </a>
+                    </Button>
+                  </CardContent>
+                </Card>
+              </div>
 
               {/* IRC System */}
-              <Card className="group hover:shadow-lg transition-shadow">
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold mb-3">Internet Relay Chat System</h3>
-                  <p className="text-muted-foreground mb-4 text-pretty">
-                    Developed a real-time chat application in C++ inspired by IRC, supporting multiple users, channels,
-                    and message broadcasting with network programming.
-                  </p>
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    <Badge>C++</Badge>
-                    <Badge>Network Programming</Badge>
-                    <Badge>Real-time</Badge>
-                    <Badge>IRC Protocol</Badge>
-                  </div>
-                  <Button variant="outline" size="sm" asChild>
-                    <a href="https://github.com/hatim-alouani/IRC-42Cursus" target="_blank" rel="noopener noreferrer">
-                      <Github className="w-4 h-4 mr-2" />
-                      View on GitHub
-                    </a>
-                  </Button>
-                </CardContent>
-              </Card>
+              <div className="scroll-reveal">
+                <Card className="group hover:shadow-lg transition-shadow gradient-frame">
+                  <CardContent className="p-6">
+                    <h3 className="text-xl font-semibold mb-3">Internet Relay Chat System</h3>
+                    <p className="text-muted-foreground mb-4 text-pretty">
+                      Developed a real-time chat application in C++ inspired by IRC, supporting multiple users,
+                      channels, and message broadcasting with network programming.
+                    </p>
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      <Badge>C++</Badge>
+                      <Badge>Network Programming</Badge>
+                      <Badge>Real-time</Badge>
+                      <Badge>IRC Protocol</Badge>
+                    </div>
+                    <Button variant="outline" size="sm" asChild>
+                      <a href="https://github.com/hatim-alouani/IRC-42Cursus" target="_blank" rel="noopener noreferrer">
+                        <Github className="w-4 h-4 mr-2" />
+                        View on GitHub
+                      </a>
+                    </Button>
+                  </CardContent>
+                </Card>
+              </div>
 
               {/* Data Warehouse Management */}
-              <Card className="group hover:shadow-lg transition-shadow">
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold mb-3">Data Warehouse Management</h3>
-                  <p className="text-muted-foreground mb-4 text-pretty">
-                    Implemented a Data Warehouse Management System using Big Data technologies for retail chain
-                    analytics, utilizing Hadoop, Cassandra, and Python for efficient data processing and storage.
-                  </p>
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    <Badge>Hadoop</Badge>
-                    <Badge>Cassandra</Badge>
-                    <Badge>Python</Badge>
-                    <Badge>Big Data</Badge>
-                  </div>
-                  <Button variant="outline" size="sm" asChild>
-                    <a
-                      href="https://github.com/hatim-alouani/Data-Warehouse-Management"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <Github className="w-4 h-4 mr-2" />
-                      View on GitHub
-                    </a>
-                  </Button>
-                </CardContent>
-              </Card>
+              <div className="scroll-reveal">
+                <Card className="group hover:shadow-lg transition-shadow gradient-frame">
+                  <CardContent className="p-6">
+                    <h3 className="text-xl font-semibold mb-3">Data Warehouse Management</h3>
+                    <p className="text-muted-foreground mb-4 text-pretty">
+                      Implemented a Data Warehouse Management System using Big Data technologies for retail chain
+                      analytics, utilizing Hadoop, Cassandra, and Python for efficient data processing and storage.
+                    </p>
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      <Badge>Hadoop</Badge>
+                      <Badge>Cassandra</Badge>
+                      <Badge>Python</Badge>
+                      <Badge>Big Data</Badge>
+                    </div>
+                    <Button variant="outline" size="sm" asChild>
+                      <a
+                        href="https://github.com/hatim-alouani/Data-Warehouse-Management"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Github className="w-4 h-4 mr-2" />
+                        View on GitHub
+                      </a>
+                    </Button>
+                  </CardContent>
+                </Card>
+              </div>
 
               {/* Sentiment Analysis Model */}
-              <Card className="group hover:shadow-lg transition-shadow">
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold mb-3">COVID-19 Vaccine Sentiment Analysis</h3>
-                  <p className="text-muted-foreground mb-4 text-pretty">
-                    Developed an NLP model to analyze Twitter sentiment about COVID-19 vaccines using NLTK, TF-IDF
-                    Vectorizer, and Random Forest Classifier with comprehensive evaluation metrics.
-                  </p>
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    <Badge>NLP</Badge>
-                    <Badge>NLTK</Badge>
-                    <Badge>Random Forest</Badge>
-                    <Badge>Sentiment Analysis</Badge>
-                  </div>
-                  <Button variant="outline" size="sm" asChild>
-                    <a
-                      href="https://github.com/hatim-alouani/Sentiment-Analysis-Model"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <Github className="w-4 h-4 mr-2" />
-                      View on GitHub
-                    </a>
-                  </Button>
-                </CardContent>
-              </Card>
+              <div className="scroll-reveal">
+                <Card className="group hover:shadow-lg transition-shadow gradient-frame">
+                  <CardContent className="p-6">
+                    <h3 className="text-xl font-semibold mb-3">COVID-19 Vaccine Sentiment Analysis</h3>
+                    <p className="text-muted-foreground mb-4 text-pretty">
+                      Developed an NLP model to analyze Twitter sentiment about COVID-19 vaccines using NLTK, TF-IDF
+                      Vectorizer, and Random Forest Classifier with comprehensive evaluation metrics.
+                    </p>
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      <Badge>NLP</Badge>
+                      <Badge>NLTK</Badge>
+                      <Badge>Random Forest</Badge>
+                      <Badge>Sentiment Analysis</Badge>
+                    </div>
+                    <Button variant="outline" size="sm" asChild>
+                      <a
+                        href="https://github.com/hatim-alouani/Sentiment-Analysis-Model"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Github className="w-4 h-4 mr-2" />
+                        View on GitHub
+                      </a>
+                    </Button>
+                  </CardContent>
+                </Card>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Certificates */}
-      <section id="certificates" className="py-20">
-        <div className="container mx-auto px-4">
+      <section id="certificates" className="py-20 bg-background">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5"></div>
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-balance">Certificates</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-balance scroll-reveal">
+              Certificates
+            </h2>
 
-            {/* Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate */}
-            <div className="max-w-2xl mx-auto">
-              <Card className="group hover:shadow-lg transition-shadow">
+            <div className="max-w-2xl mx-auto scroll-reveal">
+              <Card className="group hover:shadow-lg transition-shadow gradient-frame">
                 <CardContent className="p-6">
                   <h3 className="text-xl font-semibold mb-3">
                     Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate
@@ -791,10 +892,10 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section id="contact" className="py-20 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
+      <section id="contact" className="py-20 bg-background">
+        <div className="absolute inset-0 bg-gradient-to-br from-accent/5 via-transparent to-primary/5"></div>
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-4xl mx-auto text-center scroll-reveal">
             <h2 className="text-3xl md:text-4xl font-bold mb-12 text-balance">Get In Touch</h2>
 
             <p className="text-lg text-muted-foreground mb-8 text-pretty">
@@ -803,20 +904,33 @@ export default function Portfolio() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <Button size="lg" className="text-lg px-8" asChild>
+              <Button
+                size="lg"
+                className="text-lg px-8 bg-primary hover:bg-primary/90 shadow-lg hover:shadow-primary/25"
+                asChild
+              >
                 <a href="mailto:alouanihatim01@gmail.com">
                   <Mail className="w-5 h-5 mr-2" />
                   Send Email
                 </a>
               </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8 bg-transparent" asChild>
+              <Button
+                variant="outline"
+                size="lg"
+                className="text-lg px-8 bg-transparent hover:scale-105 transition-all duration-300 border-primary/30 hover:border-primary hover:bg-primary/10"
+                asChild
+              >
                 <a href="https://github.com/hatim-alouani" target="_blank" rel="noopener noreferrer">
                   <Github className="w-5 h-5 mr-2" />
                   @hatim-alouani
                 </a>
               </Button>
-              {/* LinkedIn button */}
-              <Button variant="outline" size="lg" className="text-lg px-8 bg-transparent" asChild>
+              <Button
+                variant="outline"
+                size="lg"
+                className="text-lg px-8 bg-transparent hover:scale-105 transition-all duration-300 border-primary/30 hover:border-primary hover:bg-primary/10"
+                asChild
+              >
                 <a href="https://www.linkedin.com/in/hatim-alouani-527617304" target="_blank" rel="noopener noreferrer">
                   <Linkedin className="w-5 h-5 mr-2" />
                   LinkedIn
@@ -838,8 +952,7 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="py-8 border-t">
+      <footer className="py-8 border-t border-primary/20 bg-background">
         <div className="container mx-auto px-4 text-center">
           <p className="text-muted-foreground">© 2025 Alouani Hatim</p>
         </div>
