@@ -339,8 +339,8 @@ export default function Portfolio() {
                           <Code className="w-6 h-6 text-primary" />
                         </div>
                         <div>
-                          <h3 className="text-2xl font-bold text-primary mb-1">1337 Coding School – Common Core</h3>
-                          <p className="text-lg font-semibold text-accent mb-2">Software Engineering Program</p>
+                          <h3 className="text-2xl font-bold text-white mb-1">1337 Coding School – Common Core</h3>
+                          <p className="text-lg font-semibold text-white mb-2">Software Engineering Program</p>
                           <div className="flex items-center gap-2 text-sm text-muted-foreground">
                             <Calendar className="w-4 h-4" />
                             <span>2023 – Present</span>
@@ -384,10 +384,8 @@ export default function Portfolio() {
                           <Brain className="w-6 h-6 text-accent" />
                         </div>
                         <div>
-                          <h3 className="text-2xl font-bold text-primary mb-1">
-                            Bachelor's in Information Systems & AI
-                          </h3>
-                          <p className="text-lg font-semibold text-accent mb-2">
+                          <h3 className="text-2xl font-bold text-white mb-1">Bachelor's in Information Systems & AI</h3>
+                          <p className="text-lg font-semibold text-white mb-2">
                             Computer Science & Artificial Intelligence
                           </p>
                           <div className="flex items-center gap-2 text-sm text-muted-foreground">
@@ -429,8 +427,8 @@ export default function Portfolio() {
                           <Award className="w-6 h-6 text-chart-3" />
                         </div>
                         <div>
-                          <h3 className="text-2xl font-bold text-primary mb-1">Baccalaureate in Physical Sciences</h3>
-                          <p className="text-lg font-semibold text-accent mb-2">Scientific Track</p>
+                          <h3 className="text-2xl font-bold text-white mb-1">Baccalaureate in Physical Sciences</h3>
+                          <p className="text-lg font-semibold text-white mb-2">Scientific Track</p>
                           <div className="flex items-center gap-2 text-sm text-muted-foreground">
                             <Calendar className="w-4 h-4" />
                             <span>2020 – 2021</span>
@@ -485,10 +483,10 @@ export default function Portfolio() {
                       <h3 className="text-lg font-semibold">Programming Languages</h3>
                     </div>
                     <div className="flex flex-wrap gap-2 flex-1">
-                      <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-primary text-primary-foreground min-w-[80px] text-center">
+                      <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
                         C
                       </Badge>
-                      <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-primary text-primary-foreground min-w-[80px] text-center">
+                      <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
                         C++
                       </Badge>
                       <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
@@ -659,9 +657,55 @@ export default function Portfolio() {
             </h2>
 
             <div className="grid md:grid-cols-2 gap-8">
+              {/* Products Recommendation System */}
+              <div className="scroll-reveal">
+                <Card className="group hover:shadow-xl transition-all duration-300 gradient-frame overflow-hidden">
+                  <div className="relative overflow-hidden">
+                    <img
+                      src="/images/amazon-recommendation.jpeg"
+                      alt="Products Recommendation System"
+                      className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  </div>
+                  <CardContent className="p-6">
+                    <h3 className="text-xl font-semibold mb-3">Products Recommendation System</h3>
+                    <p className="text-muted-foreground mb-4 text-pretty">
+                      An Amazon-like recommendation system combining TensorFlow, PostgreSQL, web scraping, and fully
+                      containerized with Docker and Python for intelligent product suggestions.
+                    </p>
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      <Badge>TensorFlow</Badge>
+                      <Badge>PostgreSQL</Badge>
+                      <Badge>Python</Badge>
+                      <Badge>Docker</Badge>
+                      <Badge>Web Scraping</Badge>
+                    </div>
+                    <Button variant="outline" size="sm" asChild>
+                      <a
+                        href="https://github.com/hatim-alouani/Products-Recommendation-System"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Github className="w-4 h-4 mr-2" />
+                        View on GitHub
+                      </a>
+                    </Button>
+                  </CardContent>
+                </Card>
+              </div>
+
               {/* Freelance WordPress Project */}
               <div className="scroll-reveal">
-                <Card className="group hover:shadow-lg transition-shadow gradient-frame">
+                <Card className="group hover:shadow-xl transition-all duration-300 gradient-frame overflow-hidden">
+                  <div className="relative overflow-hidden">
+                    <img
+                      src="/images/annia.jpeg"
+                      alt="Annialux Website"
+                      className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  </div>
                   <CardContent className="p-6">
                     <h3 className="text-xl font-semibold mb-3">Annialux Website</h3>
                     <p className="text-muted-foreground mb-4 text-pretty">
@@ -686,7 +730,15 @@ export default function Portfolio() {
 
               {/* Minishell */}
               <div className="scroll-reveal">
-                <Card className="group hover:shadow-lg transition-shadow gradient-frame">
+                <Card className="group hover:shadow-xl transition-all duration-300 gradient-frame overflow-hidden">
+                  <div className="relative overflow-hidden">
+                    <img
+                      src="/images/minishell.webp"
+                      alt="Minishell Project"
+                      className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  </div>
                   <CardContent className="p-6">
                     <h3 className="text-xl font-semibold mb-3">Minishell</h3>
                     <p className="text-muted-foreground mb-4 text-pretty">
@@ -714,7 +766,15 @@ export default function Portfolio() {
 
               {/* Inception */}
               <div className="scroll-reveal">
-                <Card className="group hover:shadow-lg transition-shadow gradient-frame">
+                <Card className="group hover:shadow-xl transition-all duration-300 gradient-frame overflow-hidden">
+                  <div className="relative overflow-hidden">
+                    <img
+                      src="/images/docker.webp"
+                      alt="Inception Docker Project"
+                      className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  </div>
                   <CardContent className="p-6">
                     <h3 className="text-xl font-semibold mb-3">Inception</h3>
                     <p className="text-muted-foreground mb-4 text-pretty">
@@ -741,16 +801,25 @@ export default function Portfolio() {
                 </Card>
               </div>
 
-              {/* Product Recommendation Engine */}
+              {/* Courses Recommendation System */}
               <div className="scroll-reveal">
-                <Card className="group hover:shadow-lg transition-shadow gradient-frame">
+                <Card className="group hover:shadow-xl transition-all duration-300 gradient-frame overflow-hidden">
+                  <div className="relative overflow-hidden">
+                    <img
+                      src="/images/feature-courses-1.webp"
+                      alt="Courses Recommendation System"
+                      className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  </div>
                   <CardContent className="p-6">
                     <h3 className="text-xl font-semibold mb-3">Courses Recommendation System</h3>
                     <p className="text-muted-foreground mb-4 text-pretty">
                       Implemented a personalized course recommendation system using Big Data tools, Hadoop, PySpark with
-                      ALS algorithm, and Cassandra for scalable data processing.
+                      ALS algorithm, Cassandra, and Python for scalable data processing.
                     </p>
                     <div className="flex flex-wrap gap-2 mb-4">
+                      <Badge>Python</Badge>
                       <Badge>Hadoop</Badge>
                       <Badge>PySpark</Badge>
                       <Badge>Cassandra</Badge>
@@ -772,7 +841,15 @@ export default function Portfolio() {
 
               {/* IRC System */}
               <div className="scroll-reveal">
-                <Card className="group hover:shadow-lg transition-shadow gradient-frame">
+                <Card className="group hover:shadow-xl transition-all duration-300 gradient-frame overflow-hidden">
+                  <div className="relative overflow-hidden">
+                    <img
+                      src="/images/irc.webp"
+                      alt="Internet Relay Chat System"
+                      className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  </div>
                   <CardContent className="p-6">
                     <h3 className="text-xl font-semibold mb-3">Internet Relay Chat System</h3>
                     <p className="text-muted-foreground mb-4 text-pretty">
@@ -797,7 +874,15 @@ export default function Portfolio() {
 
               {/* Data Warehouse Management */}
               <div className="scroll-reveal">
-                <Card className="group hover:shadow-lg transition-shadow gradient-frame">
+                <Card className="group hover:shadow-xl transition-all duration-300 gradient-frame overflow-hidden">
+                  <div className="relative overflow-hidden">
+                    <img
+                      src="/images/data-warehouse.webp"
+                      alt="Data Warehouse Management"
+                      className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  </div>
                   <CardContent className="p-6">
                     <h3 className="text-xl font-semibold mb-3">Data Warehouse Management</h3>
                     <p className="text-muted-foreground mb-4 text-pretty">
@@ -805,9 +890,9 @@ export default function Portfolio() {
                       analytics, utilizing Hadoop, Cassandra, and Python for efficient data processing and storage.
                     </p>
                     <div className="flex flex-wrap gap-2 mb-4">
+                      <Badge>Python</Badge>
                       <Badge>Hadoop</Badge>
                       <Badge>Cassandra</Badge>
-                      <Badge>Python</Badge>
                       <Badge>Big Data</Badge>
                     </div>
                     <Button variant="outline" size="sm" asChild>
@@ -826,14 +911,23 @@ export default function Portfolio() {
 
               {/* Sentiment Analysis Model */}
               <div className="scroll-reveal">
-                <Card className="group hover:shadow-lg transition-shadow gradient-frame">
+                <Card className="group hover:shadow-xl transition-all duration-300 gradient-frame overflow-hidden">
+                  <div className="relative overflow-hidden">
+                    <img
+                      src="/images/sentiment.webp"
+                      alt="Sentiment Analysis Model"
+                      className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  </div>
                   <CardContent className="p-6">
                     <h3 className="text-xl font-semibold mb-3">COVID-19 Vaccine Sentiment Analysis</h3>
                     <p className="text-muted-foreground mb-4 text-pretty">
-                      Developed an NLP model to analyze Twitter sentiment about COVID-19 vaccines using NLTK, TF-IDF
-                      Vectorizer, and Random Forest Classifier with comprehensive evaluation metrics.
+                      Developed an NLP model using Python to analyze Twitter sentiment about COVID-19 vaccines using
+                      NLTK, TF-IDF Vectorizer, and Random Forest Classifier with comprehensive evaluation metrics.
                     </p>
                     <div className="flex flex-wrap gap-2 mb-4">
+                      <Badge>Python</Badge>
                       <Badge>NLP</Badge>
                       <Badge>NLTK</Badge>
                       <Badge>Random Forest</Badge>
@@ -868,6 +962,13 @@ export default function Portfolio() {
             <div className="max-w-2xl mx-auto scroll-reveal">
               <Card className="group hover:shadow-lg transition-shadow gradient-frame">
                 <CardContent className="p-6">
+                  <div className="relative overflow-hidden rounded-lg mb-4">
+                    <img
+                      src="/images/oracle-certificate.png"
+                      alt="Oracle Certified Foundations Associate Certificate"
+                      className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
                   <h3 className="text-xl font-semibold mb-3">
                     Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate
                   </h3>
