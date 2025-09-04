@@ -17,8 +17,8 @@ import {
   Menu,
   X,
   GraduationCap,
-  Award,
   Calendar,
+  Globe,
 } from "lucide-react"
 import { useState, useEffect } from "react"
 
@@ -340,7 +340,7 @@ export default function Portfolio() {
                         </div>
                         <div>
                           <h3 className="text-2xl font-bold text-white mb-1">1337 Coding School – Common Core</h3>
-                          <p className="text-lg font-semibold text-white mb-2">Software Engineering Program</p>
+                          <p className="text-lg font-semibold text-white mb-2">Software Engineering</p>
                           <div className="flex items-center gap-2 text-sm text-muted-foreground">
                             <Calendar className="w-4 h-4" />
                             <span>2023 – Present</span>
@@ -360,13 +360,13 @@ export default function Portfolio() {
                       project-based curriculum.
                     </p>
                     <div className="flex flex-wrap gap-2 mt-4">
-                      <Badge variant="secondary" className="bg-primary/10 text-primary border-primary/20">
+                      <Badge variant="secondary" className="bg-primary/10 text-white border-primary/20">
                         C Programming
                       </Badge>
-                      <Badge variant="secondary" className="bg-primary/10 text-primary border-primary/20">
+                      <Badge variant="secondary" className="bg-primary/10 text-white border-primary/20">
                         System Programming
                       </Badge>
-                      <Badge variant="secondary" className="bg-primary/10 text-primary border-primary/20">
+                      <Badge variant="secondary" className="bg-primary/10 text-white border-primary/20">
                         42 Network
                       </Badge>
                     </div>
@@ -403,57 +403,22 @@ export default function Portfolio() {
                       with comprehensive theoretical and practical knowledge in machine learning and data science.
                     </p>
                     <div className="flex flex-wrap gap-2 mt-4">
-                      <Badge variant="secondary" className="bg-accent/10 text-accent border-accent/20">
+                      <Badge variant="secondary" className="bg-accent/10 text-white border-accent/20">
                         Artificial Intelligence
                       </Badge>
-                      <Badge variant="secondary" className="bg-accent/10 text-accent border-accent/20">
+                      <Badge variant="secondary" className="bg-accent/10 text-white border-accent/20">
                         Big Data
                       </Badge>
-                      <Badge variant="secondary" className="bg-accent/10 text-accent border-accent/20">
+                      <Badge variant="secondary" className="bg-accent/10 text-white border-accent/20">
                         Data Analytics
                       </Badge>
-                    </div>
-                  </CardContent>
-                </Card>
-              </div>
-
-              {/* Baccalaureate */}
-              <div className="scroll-reveal">
-                <Card className="gradient-frame hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 hover:scale-[1.02] group">
-                  <CardContent className="p-8">
-                    <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6">
-                      <div className="flex items-start gap-4">
-                        <div className="p-3 rounded-full bg-chart-3/10 border border-chart-3/20 group-hover:bg-chart-3/20 transition-colors">
-                          <Award className="w-6 h-6 text-chart-3" />
-                        </div>
-                        <div>
-                          <h3 className="text-2xl font-bold text-white mb-1">Baccalaureate in Physical Sciences</h3>
-                          <p className="text-lg font-semibold text-white mb-2">Scientific Track</p>
-                          <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                            <Calendar className="w-4 h-4" />
-                            <span>2020 – 2021</span>
-                          </div>
-                        </div>
-                      </div>
-                      <Badge
-                        variant="outline"
-                        className="w-fit mt-4 lg:mt-0 border-chart-3/30 text-chart-3 bg-chart-3/5"
-                      >
-                        Completed
-                      </Badge>
-                    </div>
-                    <p className="text-muted-foreground leading-relaxed">
-                      Strong foundation in mathematics, physics, and scientific methodology, providing the analytical
-                      skills essential for computer science and engineering disciplines.
-                    </p>
-                    <div className="flex flex-wrap gap-2 mt-4">
-                      <Badge variant="secondary" className="bg-chart-3/10 text-chart-3 border-chart-3/20">
+                      <Badge variant="secondary" className="bg-accent/10 text-white border-accent/20">
                         Mathematics
                       </Badge>
-                      <Badge variant="secondary" className="bg-chart-3/10 text-chart-3 border-chart-3/20">
+                      <Badge variant="secondary" className="bg-accent/10 text-white border-accent/20">
                         Physics
                       </Badge>
-                      <Badge variant="secondary" className="bg-chart-3/10 text-chart-3 border-chart-3/20">
+                      <Badge variant="secondary" className="bg-accent/10 text-white border-accent/20">
                         Scientific Method
                       </Badge>
                     </div>
@@ -497,6 +462,38 @@ export default function Portfolio() {
                       </Badge>
                       <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
                         SQL
+                      </Badge>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+
+              {/* Web Development */}
+              <div className="scroll-reveal">
+                <Card className="group hover:shadow-xl hover:scale-105 transition-all duration-300 border-l-4 border-l-cyan-500/50 gradient-frame min-h-[200px] flex flex-col">
+                  <CardContent className="p-6 flex-1 flex flex-col">
+                    <div className="flex items-center mb-4">
+                      <Globe className="w-8 h-8 mr-3 text-cyan-500 group-hover:scale-110 transition-transform duration-300" />
+                      <h3 className="text-lg font-semibold">Web Development</h3>
+                    </div>
+                    <div className="flex flex-wrap gap-2 flex-1">
+                      <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
+                        WordPress
+                      </Badge>
+                      <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
+                        HTML
+                      </Badge>
+                      <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
+                        CSS
+                      </Badge>
+                      <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
+                        JavaScript
+                      </Badge>
+                      <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
+                        TypeScript
+                      </Badge>
+                      <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
+                        React
                       </Badge>
                     </div>
                   </CardContent>
@@ -1035,6 +1032,17 @@ export default function Portfolio() {
                 <a href="https://www.linkedin.com/in/hatim-alouani-527617304" target="_blank" rel="noopener noreferrer">
                   <Linkedin className="w-5 h-5 mr-2" />
                   LinkedIn
+                </a>
+              </Button>
+              <Button
+                variant="outline"
+                size="lg"
+                className="text-lg px-8 bg-transparent hover:scale-105 transition-all duration-300 border-primary/30 hover:border-primary hover:bg-primary/10"
+                asChild
+              >
+                <a href="https://profile.indeed.com/p/alouanih-rtd5hn4" target="_blank" rel="noopener noreferrer">
+                  <Globe className="w-5 h-5 mr-2" />
+                  Indeed
                 </a>
               </Button>
             </div>
