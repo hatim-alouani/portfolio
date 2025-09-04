@@ -221,8 +221,7 @@ export default function Portfolio() {
         </div>
       </nav>
 
-      <section id="hero" className="relative min-h-screen flex items-center justify-center bg-background pt-16">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5"></div>
+      <section id="hero" className="relative min-h-screen flex items-center justify-center bg-black pt-16">
         <div className="container mx-auto px-4 py-20 relative z-10">
           <div className="max-w-4xl mx-auto text-center scroll-reveal">
             {/* Profile Photo */}
@@ -319,8 +318,7 @@ export default function Portfolio() {
         </div>
       </section>
 
-      <section id="education" className="py-20 bg-background">
-        <div className="absolute inset-0 bg-gradient-to-br from-accent/5 via-transparent to-primary/5"></div>
+      <section id="education" className="py-20 bg-black">
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-balance scroll-reveal">
@@ -430,8 +428,7 @@ export default function Portfolio() {
         </div>
       </section>
 
-      <section id="skills" className="py-20 bg-background">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5"></div>
+      <section id="skills" className="py-20 bg-black">
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-balance scroll-reveal">
@@ -459,9 +456,6 @@ export default function Portfolio() {
                       </Badge>
                       <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
                         Shell Scripting
-                      </Badge>
-                      <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
-                        SQL
                       </Badge>
                     </div>
                   </CardContent>
@@ -573,6 +567,9 @@ export default function Portfolio() {
                       <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
                         PySpark
                       </Badge>
+                      <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
+                        Power BI
+                      </Badge>
                     </div>
                   </CardContent>
                 </Card>
@@ -580,10 +577,10 @@ export default function Portfolio() {
 
               {/* Databases */}
               <div className="scroll-reveal">
-                <Card className="group hover:shadow-xl hover:scale-105 transition-all duration-300 border-l-4 border-l-green-500/50 gradient-frame min-h-[200px] flex flex-col">
+                <Card className="group hover:shadow-xl hover:scale-105 transition-all duration-300 border-l-4 border-l-gray-500/50 gradient-frame min-h-[200px] flex flex-col">
                   <CardContent className="p-6 flex-1 flex flex-col">
                     <div className="flex items-center mb-4">
-                      <Database className="w-8 h-8 mr-3 text-green-500 group-hover:scale-110 transition-transform duration-300" />
+                      <Database className="w-8 h-8 mr-3 text-gray-400 group-hover:scale-110 transition-transform duration-300" />
                       <h3 className="text-lg font-semibold">Databases</h3>
                     </div>
                     <div className="flex flex-wrap gap-2 flex-1">
@@ -645,8 +642,7 @@ export default function Portfolio() {
         </div>
       </section>
 
-      <section id="projects" className="py-20 bg-background">
-        <div className="absolute inset-0 bg-gradient-to-br from-accent/5 via-transparent to-primary/5"></div>
+      <section id="projects" className="py-20 bg-black">
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-balance scroll-reveal">
@@ -948,15 +944,14 @@ export default function Portfolio() {
         </div>
       </section>
 
-      <section id="certificates" className="py-20 bg-background">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5"></div>
+      <section id="certificates" className="py-20 bg-black">
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-balance scroll-reveal">
               Certificates
             </h2>
 
-            <div className="max-w-2xl mx-auto scroll-reveal">
+            <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto scroll-reveal">
               <Card className="group hover:shadow-lg transition-shadow gradient-frame">
                 <CardContent className="p-6">
                   <div className="relative overflow-hidden rounded-lg mb-4">
@@ -985,13 +980,30 @@ export default function Portfolio() {
                   </Button>
                 </CardContent>
               </Card>
+
+              <Card className="group hover:shadow-lg transition-shadow gradient-frame">
+                <CardContent className="p-6">
+                  <div className="relative overflow-hidden rounded-lg mb-4">
+                    <img
+                      src="/images/rosetta-stone-certificate.jpeg"
+                      alt="Rosetta Stone English Certificate B2 Level"
+                      className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3">Rosetta Stone English Certificate (2025)</h3>
+                  <p className="text-muted-foreground mb-4 text-pretty">
+                    B2 level English proficiency certification achieved through Rosetta Stone's comprehensive language
+                    learning program. Completed during my education at FP Khouribga, demonstrating advanced English
+                    communication skills.
+                  </p>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="contact" className="py-20 bg-background">
-        <div className="absolute inset-0 bg-gradient-to-br from-accent/5 via-transparent to-primary/5"></div>
+      <section id="contact" className="py-20 bg-black">
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center scroll-reveal">
             <h2 className="text-3xl md:text-4xl font-bold mb-12 text-balance">Get In Touch</h2>
@@ -1061,7 +1073,7 @@ export default function Portfolio() {
         </div>
       </section>
 
-      <footer className="py-8 border-t border-primary/20 bg-background">
+      <footer className="py-8 border-t border-primary/20 bg-black">
         <div className="container mx-auto px-4 text-center">
           <p className="text-muted-foreground">© 2025 Alouani Hatim</p>
         </div>
