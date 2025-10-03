@@ -489,6 +489,15 @@ export default function Portfolio() {
                       <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
                         React
                       </Badge>
+                      <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
+                        Next.js
+                      </Badge>
+                      <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
+                        Node.js
+                      </Badge>
+                      <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
+                        Flask
+                      </Badge>
                     </div>
                   </CardContent>
                 </Card>
