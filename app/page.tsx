@@ -455,6 +455,12 @@ export default function Portfolio() {
                         Python
                       </Badge>
                       <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
+                        JavaScript
+                      </Badge>
+                      <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
+                        TypeScript
+                      </Badge>
+                      <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
                         Shell Scripting
                       </Badge>
                     </div>
@@ -479,12 +485,6 @@ export default function Portfolio() {
                       </Badge>
                       <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
                         CSS
-                      </Badge>
-                      <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
-                        JavaScript
-                      </Badge>
-                      <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
-                        TypeScript
                       </Badge>
                       <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
                         React
