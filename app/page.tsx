@@ -361,7 +361,7 @@ export default function Portfolio() {
                           <p className="text-lg font-semibold text-white mb-2">Software Engineering</p>
                           <div className="flex items-center gap-2 text-sm text-muted-foreground">
                             <Calendar className="w-4 h-4" />
-                            <span>2023 – Present</span>
+                            <span>2023 – 2025</span>
                           </div>
                         </div>
                       </div>
@@ -369,7 +369,7 @@ export default function Portfolio() {
                         variant="outline"
                         className="w-fit mt-4 lg:mt-0 border-primary/30 text-primary bg-primary/5"
                       >
-                        In Progress
+                        Completed
                       </Badge>
                     </div>
                     <p className="text-muted-foreground leading-relaxed">
