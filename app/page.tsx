@@ -54,7 +54,7 @@ export default function Portfolio() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["hero", "education", "skills", "projects", "certificates", "contact"]
+      const sections = ["hero", "education", "skills", "experience", "projects", "certificates", "contact"]
       const scrollPosition = window.scrollY
 
       for (const section of sections) {
@@ -114,6 +114,18 @@ export default function Portfolio() {
               >
                 Skills
                 {activeSection === "skills" && (
+                  <div className="absolute -bottom-1 left-0 right-0 h-0.5 bg-primary rounded-full animate-pulse"></div>
+                )}
+              </button>
+              {/* add experience navigation button in desktop menu */}
+              <button
+                onClick={() => scrollToSection("experience")}
+                className={`relative text-muted-foreground hover:text-foreground transition-all duration-300 transform hover:scale-105 ${
+                  activeSection === "experience" ? "text-primary font-semibold" : ""
+                }`}
+              >
+                Experience
+                {activeSection === "experience" && (
                   <div className="absolute -bottom-1 left-0 right-0 h-0.5 bg-primary rounded-full animate-pulse"></div>
                 )}
               </button>
@@ -190,6 +202,14 @@ export default function Portfolio() {
                   }`}
                 >
                   Skills
+                </button>
+                <button
+                  onClick={() => scrollToSection("experience")}
+                  className={`text-left text-muted-foreground hover:text-foreground transition-all duration-200 hover:translate-x-2 ${
+                    activeSection === "experience" ? "text-primary font-semibold" : ""
+                  }`}
+                >
+                  Experience
                 </button>
                 <button
                   onClick={() => scrollToSection("projects")}
@@ -455,12 +475,6 @@ export default function Portfolio() {
                         Python
                       </Badge>
                       <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
-                        JavaScript
-                      </Badge>
-                      <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
-                        TypeScript
-                      </Badge>
-                      <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
                         Shell Scripting
                       </Badge>
                     </div>
@@ -487,13 +501,13 @@ export default function Portfolio() {
                         CSS
                       </Badge>
                       <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
+                        JavaScript
+                      </Badge>
+                      <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
+                        TypeScript
+                      </Badge>
+                      <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
                         React
-                      </Badge>
-                      <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
-                        Next.js
-                      </Badge>
-                      <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
-                        Node.js
                       </Badge>
                     </div>
                   </CardContent>
@@ -526,13 +540,13 @@ export default function Portfolio() {
                 </Card>
               </div>
 
-              {/* NLP & Text Processing */}
+              {/* NLP & LLMs */}
               <div className="scroll-reveal">
                 <Card className="group hover:shadow-xl hover:scale-105 transition-all duration-300 border-l-4 border-l-purple-500/50 gradient-frame min-h-[200px] flex flex-col">
                   <CardContent className="p-6 flex-1 flex flex-col">
                     <div className="flex items-center mb-4">
                       <Brain className="w-8 h-8 mr-3 text-purple-500 group-hover:scale-110 transition-transform duration-300" />
-                      <h3 className="text-lg font-semibold">NLP & Text Processing</h3>
+                      <h3 className="text-lg font-semibold">NLP & LLMs</h3>
                     </div>
                     <div className="flex flex-wrap gap-2 flex-1">
                       <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
@@ -542,10 +556,13 @@ export default function Portfolio() {
                         NLTK
                       </Badge>
                       <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
-                        TF-IDF
+                        Ollama
                       </Badge>
                       <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
-                        Sentiment Analysis
+                        RAG
+                      </Badge>
+                      <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
+                        LangChain
                       </Badge>
                     </div>
                   </CardContent>
@@ -644,6 +661,113 @@ export default function Portfolio() {
             </div>
 
             {/* Add more skills as needed */}
+          </div>
+        </div>
+      </section>
+
+      <section id="experience" className="py-20 bg-black">
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-balance scroll-reveal">
+              <Calendar className="w-10 h-10 mx-auto mb-4 text-primary" />
+              Professional Experience
+            </h2>
+
+            <div className="space-y-8">
+              {/* AI Software Engineer Intern at A2XCORP */}
+              <div className="scroll-reveal">
+                <Card className="gradient-frame hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 hover:scale-[1.02] group">
+                  <CardContent className="p-8">
+                    <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6">
+                      <div className="flex items-start gap-4">
+                        <div className="p-3 rounded-full bg-primary/10 border border-primary/20 group-hover:bg-primary/20 transition-colors">
+                          <Brain className="w-6 h-6 text-primary" />
+                        </div>
+                        <div>
+                          <h3 className="text-2xl font-bold text-white mb-1">AI Software Engineer Intern</h3>
+                          <p className="text-lg font-semibold text-white mb-2">A2XCORP</p>
+                          <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                            <Calendar className="w-4 h-4" />
+                            <span>October 2025 - December 2025</span>
+                          </div>
+                        </div>
+                      </div>
+                      <Badge
+                        variant="outline"
+                        className="w-fit mt-4 lg:mt-0 border-primary/30 text-primary bg-primary/5"
+                      >
+                        Current
+                      </Badge>
+                    </div>
+                    <p className="text-muted-foreground leading-relaxed mb-4">
+                      Built AI-AUDIT, a full-stack web application featuring a 3D avatar chatbot that functions as an AI
+                      assistant for enterprise auditing solutions.
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      <Badge variant="secondary" className="bg-primary/10 text-white border-primary/20">
+                        Full-Stack Development
+                      </Badge>
+                      <Badge variant="secondary" className="bg-primary/10 text-white border-primary/20">
+                        3D Avatar Integration
+                      </Badge>
+                      <Badge variant="secondary" className="bg-primary/10 text-white border-primary/20">
+                        AI Assistant
+                      </Badge>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+
+              {/* Freelance Web Developer */}
+              <div className="scroll-reveal">
+                <Card className="gradient-frame hover:shadow-2xl hover:shadow-accent/10 transition-all duration-500 hover:scale-[1.02] group">
+                  <CardContent className="p-8">
+                    <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6">
+                      <div className="flex items-start gap-4">
+                        <div className="p-3 rounded-full bg-accent/10 border border-accent/20 group-hover:bg-accent/20 transition-colors">
+                          <Globe className="w-6 h-6 text-accent" />
+                        </div>
+                        <div>
+                          <h3 className="text-2xl font-bold text-white mb-1">Freelance Web Developer</h3>
+                          <p className="text-lg font-semibold text-white mb-2">Remote</p>
+                          <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                            <Calendar className="w-4 h-4" />
+                            <span>May 2024 - Present</span>
+                          </div>
+                        </div>
+                      </div>
+                      <Badge variant="outline" className="w-fit mt-4 lg:mt-0 border-accent/30 text-accent bg-accent/5">
+                        Ongoing
+                      </Badge>
+                    </div>
+                    <p className="text-muted-foreground leading-relaxed mb-4">
+                      Developing responsive and modern web applications for clients worldwide, specializing in WordPress
+                      website creation and full-stack development with modern web technologies.
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      <Badge variant="secondary" className="bg-accent/10 text-white border-accent/20">
+                        WordPress
+                      </Badge>
+                      <Badge variant="secondary" className="bg-accent/10 text-white border-accent/20">
+                        HTML/CSS
+                      </Badge>
+                      <Badge variant="secondary" className="bg-accent/10 text-white border-accent/20">
+                        JavaScript
+                      </Badge>
+                      <Badge variant="secondary" className="bg-accent/10 text-white border-accent/20">
+                        Next.js
+                      </Badge>
+                      <Badge variant="secondary" className="bg-accent/10 text-white border-accent/20">
+                        React
+                      </Badge>
+                      <Badge variant="secondary" className="bg-accent/10 text-white border-accent/20">
+                        Node.js
+                      </Badge>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -938,6 +1062,82 @@ export default function Portfolio() {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
+                        <Github className="w-4 h-4 mr-2" />
+                        View on GitHub
+                      </a>
+                    </Button>
+                  </CardContent>
+                </Card>
+              </div>
+
+              {/* Transcendence - Full-Stack Real-Time Ping Pong Web App */}
+              <div className="scroll-reveal">
+                <Card className="group hover:shadow-xl transition-all duration-300 gradient-frame overflow-hidden">
+                  <div className="relative overflow-hidden">
+                    <img
+                      src="/images/transcendence-pong.png"
+                      alt="Transcendence - Multiplayer Ping Pong Game"
+                      className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  </div>
+                  <CardContent className="p-6">
+                    <h3 className="text-xl font-semibold mb-3">Transcendence</h3>
+                    <p className="text-muted-foreground mb-4 text-pretty">
+                      Full-stack real-time multiplayer Ping Pong game built with Next.js, Fastify, and TypeScript.
+                      Features secure authentication, matchmaking, live gameplay with WebSockets, and a modern SPA
+                      interface. Fully containerized with Docker following DevOps best practices for deployment and
+                      scalability.
+                    </p>
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      <Badge>Next.js</Badge>
+                      <Badge>Fastify</Badge>
+                      <Badge>TypeScript</Badge>
+                      <Badge>WebSockets</Badge>
+                      <Badge>Docker</Badge>
+                      <Badge>DevOps</Badge>
+                    </div>
+                    <Button variant="outline" size="sm" asChild>
+                      <a
+                        href="https://github.com/hatim-alouani/Transcendence"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Github className="w-4 h-4 mr-2" />
+                        View on GitHub
+                      </a>
+                    </Button>
+                  </CardContent>
+                </Card>
+              </div>
+
+              {/* ChatOCP - Full-Stack Local AI Chatbot */}
+              <div className="scroll-reveal">
+                <Card className="group hover:shadow-xl transition-all duration-300 gradient-frame overflow-hidden">
+                  <div className="relative overflow-hidden">
+                    <img
+                      src="/images/chatocp-logo.png"
+                      alt="ChatOCP - Local AI Chatbot"
+                      className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  </div>
+                  <CardContent className="p-6">
+                    <h3 className="text-xl font-semibold mb-3">ChatOCP</h3>
+                    <p className="text-muted-foreground mb-4 text-pretty">
+                      Full-stack web application featuring a fully local AI chatbot with RAG pipelines implemented using
+                      LangChain and Ollama LLM. Ensures all data processing and model inference happens locally,
+                      preserving privacy and control. Intelligent responses without cloud dependencies.
+                    </p>
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      <Badge>LangChain</Badge>
+                      <Badge>Ollama</Badge>
+                      <Badge>RAG</Badge>
+                      <Badge>Local AI</Badge>
+                      <Badge>Privacy-First</Badge>
+                    </div>
+                    <Button variant="outline" size="sm" asChild>
+                      <a href="https://github.com/hatim-alouani/ChatOCP" target="_blank" rel="noopener noreferrer">
                         <Github className="w-4 h-4 mr-2" />
                         View on GitHub
                       </a>
