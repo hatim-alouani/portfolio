@@ -780,6 +780,41 @@ export default function Portfolio() {
             </h2>
 
             <div className="grid md:grid-cols-2 gap-8">
+              {/* ChatOCP - Full-Stack Local AI Chatbot */}
+              <div className="scroll-reveal">
+                <Card className="group hover:shadow-xl transition-all duration-300 gradient-frame overflow-hidden">
+                  <div className="relative overflow-hidden">
+                    <img
+                      src="/images/chatbot.jpg"
+                      alt="ChatOCP - Local AI Chatbot"
+                      className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  </div>
+                  <CardContent className="p-6">
+                    <h3 className="text-xl font-semibold mb-3">Fully Local Chatbot</h3>
+                    <p className="text-muted-foreground mb-4 text-pretty">
+                      Full-stack web application featuring a fully local AI chatbot with RAG pipelines implemented using
+                      LangChain and Ollama LLM. Ensures all data processing and model inference happens locally,
+                      preserving privacy and control. Intelligent responses without cloud dependencies.
+                    </p>
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      <Badge>LangChain</Badge>
+                      <Badge>Ollama</Badge>
+                      <Badge>RAG</Badge>
+                      <Badge>Local AI</Badge>
+                      <Badge>Privacy-First</Badge>
+                    </div>
+                    <Button variant="outline" size="sm" asChild>
+                      <a href="https://github.com/hatim-alouani/ChatOCP" target="_blank" rel="noopener noreferrer">
+                        <Github className="w-4 h-4 mr-2" />
+                        View on GitHub
+                      </a>
+                    </Button>
+                  </CardContent>
+                </Card>
+              </div>
+
               {/* Products Recommendation System */}
               <div className="scroll-reveal">
                 <Card className="group hover:shadow-xl transition-all duration-300 gradient-frame overflow-hidden">
@@ -807,6 +842,159 @@ export default function Portfolio() {
                     <Button variant="outline" size="sm" asChild>
                       <a
                         href="https://github.com/hatim-alouani/Products-Recommendation-System"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Github className="w-4 h-4 mr-2" />
+                        View on GitHub
+                      </a>
+                    </Button>
+                  </CardContent>
+                </Card>
+              </div>
+
+              {/* Courses Recommendation System */}
+              <div className="scroll-reveal">
+                <Card className="group hover:shadow-xl transition-all duration-300 gradient-frame overflow-hidden">
+                  <div className="relative overflow-hidden">
+                    <img
+                      src="/images/feature-courses-1.webp"
+                      alt="Courses Recommendation System"
+                      className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  </div>
+                  <CardContent className="p-6">
+                    <h3 className="text-xl font-semibold mb-3">Courses Recommendation System</h3>
+                    <p className="text-muted-foreground mb-4 text-pretty">
+                      Implemented a personalized course recommendation system using Big Data tools, Hadoop, PySpark with
+                      ALS algorithm, Cassandra, and Python for scalable data processing.
+                    </p>
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      <Badge>Python</Badge>
+                      <Badge>Hadoop</Badge>
+                      <Badge>PySpark</Badge>
+                      <Badge>Cassandra</Badge>
+                      <Badge>Flask</Badge>
+                    </div>
+                    <Button variant="outline" size="sm" asChild>
+                      <a
+                        href="https://github.com/hatim-alouani/Courses-Recommendation-System"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Github className="w-4 h-4 mr-2" />
+                        View on GitHub
+                      </a>
+                    </Button>
+                  </CardContent>
+                </Card>
+              </div>
+
+              {/* Sentiment Analysis Model */}
+              <div className="scroll-reveal">
+                <Card className="group hover:shadow-xl transition-all duration-300 gradient-frame overflow-hidden">
+                  <div className="relative overflow-hidden">
+                    <img
+                      src="/images/sentiment.webp"
+                      alt="Sentiment Analysis Model"
+                      className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  </div>
+                  <CardContent className="p-6">
+                    <h3 className="text-xl font-semibold mb-3">COVID-19 Vaccine Sentiment Analysis</h3>
+                    <p className="text-muted-foreground mb-4 text-pretty">
+                      Developed an NLP model using Python to analyze Twitter sentiment about COVID-19 vaccines using
+                      NLTK, TF-IDF Vectorizer, and Random Forest Classifier with comprehensive evaluation metrics.
+                    </p>
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      <Badge>Python</Badge>
+                      <Badge>NLP</Badge>
+                      <Badge>NLTK</Badge>
+                      <Badge>Random Forest</Badge>
+                      <Badge>Sentiment Analysis</Badge>
+                    </div>
+                    <Button variant="outline" size="sm" asChild>
+                      <a
+                        href="https://github.com/hatim-alouani/Sentiment-Analysis-Model"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Github className="w-4 h-4 mr-2" />
+                        View on GitHub
+                      </a>
+                    </Button>
+                  </CardContent>
+                </Card>
+              </div>
+
+              {/* Data Warehouse Management */}
+              <div className="scroll-reveal">
+                <Card className="group hover:shadow-xl transition-all duration-300 gradient-frame overflow-hidden">
+                  <div className="relative overflow-hidden">
+                    <img
+                      src="/images/data-warehouse.webp"
+                      alt="Data Warehouse Management"
+                      className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  </div>
+                  <CardContent className="p-6">
+                    <h3 className="text-xl font-semibold mb-3">Data Warehouse Management</h3>
+                    <p className="text-muted-foreground mb-4 text-pretty">
+                      Implemented a Data Warehouse Management System using Big Data technologies for retail chain
+                      analytics, utilizing Hadoop, Cassandra, and Python for efficient data processing and storage.
+                    </p>
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      <Badge>Python</Badge>
+                      <Badge>Hadoop</Badge>
+                      <Badge>Cassandra</Badge>
+                      <Badge>Big Data</Badge>
+                    </div>
+                    <Button variant="outline" size="sm" asChild>
+                      <a
+                        href="https://github.com/hatim-alouani/Data-Warehouse-Management"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Github className="w-4 h-4 mr-2" />
+                        View on GitHub
+                      </a>
+                    </Button>
+                  </CardContent>
+                </Card>
+              </div>
+              
+              {/* Transcendence - Full-Stack Real-Time Ping Pong Web App */}
+              <div className="scroll-reveal">
+                <Card className="group hover:shadow-xl transition-all duration-300 gradient-frame overflow-hidden">
+                  <div className="relative overflow-hidden">
+                    <img
+                      src="/images/transcendence-pong.png"
+                      alt="Transcendence - Multiplayer Ping Pong Game"
+                      className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  </div>
+                  <CardContent className="p-6">
+                    <h3 className="text-xl font-semibold mb-3">Transcendence</h3>
+                    <p className="text-muted-foreground mb-4 text-pretty">
+                      Full-stack real-time multiplayer Ping Pong game built with Next.js, Fastify, and TypeScript.
+                      Features secure authentication, matchmaking, live gameplay with WebSockets, and a modern SPA
+                      interface. Fully containerized with Docker & DevOps
+                    </p>
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      <Badge>Next.js</Badge>
+                      <Badge>Fastify</Badge>
+                      <Badge>TypeScript</Badge>
+                      <Badge>WebSockets</Badge>
+                      <Badge>Docker</Badge>
+                      <Badge>DevOps</Badge>
+                    </div>
+                    <Button variant="outline" size="sm" asChild>
+                      <a
+                        href="https://github.com/hatim-alouani/Transcendence"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
@@ -924,44 +1112,6 @@ export default function Portfolio() {
                 </Card>
               </div>
 
-              {/* Courses Recommendation System */}
-              <div className="scroll-reveal">
-                <Card className="group hover:shadow-xl transition-all duration-300 gradient-frame overflow-hidden">
-                  <div className="relative overflow-hidden">
-                    <img
-                      src="/images/feature-courses-1.webp"
-                      alt="Courses Recommendation System"
-                      className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  </div>
-                  <CardContent className="p-6">
-                    <h3 className="text-xl font-semibold mb-3">Courses Recommendation System</h3>
-                    <p className="text-muted-foreground mb-4 text-pretty">
-                      Implemented a personalized course recommendation system using Big Data tools, Hadoop, PySpark with
-                      ALS algorithm, Cassandra, and Python for scalable data processing.
-                    </p>
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      <Badge>Python</Badge>
-                      <Badge>Hadoop</Badge>
-                      <Badge>PySpark</Badge>
-                      <Badge>Cassandra</Badge>
-                      <Badge>Flask</Badge>
-                    </div>
-                    <Button variant="outline" size="sm" asChild>
-                      <a
-                        href="https://github.com/hatim-alouani/Courses-Recommendation-System"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <Github className="w-4 h-4 mr-2" />
-                        View on GitHub
-                      </a>
-                    </Button>
-                  </CardContent>
-                </Card>
-              </div>
-
               {/* IRC System */}
               <div className="scroll-reveal">
                 <Card className="group hover:shadow-xl transition-all duration-300 gradient-frame overflow-hidden">
@@ -995,156 +1145,6 @@ export default function Portfolio() {
                 </Card>
               </div>
 
-              {/* Data Warehouse Management */}
-              <div className="scroll-reveal">
-                <Card className="group hover:shadow-xl transition-all duration-300 gradient-frame overflow-hidden">
-                  <div className="relative overflow-hidden">
-                    <img
-                      src="/images/data-warehouse.webp"
-                      alt="Data Warehouse Management"
-                      className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  </div>
-                  <CardContent className="p-6">
-                    <h3 className="text-xl font-semibold mb-3">Data Warehouse Management</h3>
-                    <p className="text-muted-foreground mb-4 text-pretty">
-                      Implemented a Data Warehouse Management System using Big Data technologies for retail chain
-                      analytics, utilizing Hadoop, Cassandra, and Python for efficient data processing and storage.
-                    </p>
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      <Badge>Python</Badge>
-                      <Badge>Hadoop</Badge>
-                      <Badge>Cassandra</Badge>
-                      <Badge>Big Data</Badge>
-                    </div>
-                    <Button variant="outline" size="sm" asChild>
-                      <a
-                        href="https://github.com/hatim-alouani/Data-Warehouse-Management"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <Github className="w-4 h-4 mr-2" />
-                        View on GitHub
-                      </a>
-                    </Button>
-                  </CardContent>
-                </Card>
-              </div>
-
-              {/* Sentiment Analysis Model */}
-              <div className="scroll-reveal">
-                <Card className="group hover:shadow-xl transition-all duration-300 gradient-frame overflow-hidden">
-                  <div className="relative overflow-hidden">
-                    <img
-                      src="/images/sentiment.webp"
-                      alt="Sentiment Analysis Model"
-                      className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  </div>
-                  <CardContent className="p-6">
-                    <h3 className="text-xl font-semibold mb-3">COVID-19 Vaccine Sentiment Analysis</h3>
-                    <p className="text-muted-foreground mb-4 text-pretty">
-                      Developed an NLP model using Python to analyze Twitter sentiment about COVID-19 vaccines using
-                      NLTK, TF-IDF Vectorizer, and Random Forest Classifier with comprehensive evaluation metrics.
-                    </p>
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      <Badge>Python</Badge>
-                      <Badge>NLP</Badge>
-                      <Badge>NLTK</Badge>
-                      <Badge>Random Forest</Badge>
-                      <Badge>Sentiment Analysis</Badge>
-                    </div>
-                    <Button variant="outline" size="sm" asChild>
-                      <a
-                        href="https://github.com/hatim-alouani/Sentiment-Analysis-Model"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <Github className="w-4 h-4 mr-2" />
-                        View on GitHub
-                      </a>
-                    </Button>
-                  </CardContent>
-                </Card>
-              </div>
-
-              {/* Transcendence - Full-Stack Real-Time Ping Pong Web App */}
-              <div className="scroll-reveal">
-                <Card className="group hover:shadow-xl transition-all duration-300 gradient-frame overflow-hidden">
-                  <div className="relative overflow-hidden">
-                    <img
-                      src="/images/transcendence-pong.png"
-                      alt="Transcendence - Multiplayer Ping Pong Game"
-                      className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  </div>
-                  <CardContent className="p-6">
-                    <h3 className="text-xl font-semibold mb-3">Transcendence</h3>
-                    <p className="text-muted-foreground mb-4 text-pretty">
-                      Full-stack real-time multiplayer Ping Pong game built with Next.js, Fastify, and TypeScript.
-                      Features secure authentication, matchmaking, live gameplay with WebSockets, and a modern SPA
-                      interface. Fully containerized with Docker following DevOps best practices for deployment and
-                      scalability.
-                    </p>
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      <Badge>Next.js</Badge>
-                      <Badge>Fastify</Badge>
-                      <Badge>TypeScript</Badge>
-                      <Badge>WebSockets</Badge>
-                      <Badge>Docker</Badge>
-                      <Badge>DevOps</Badge>
-                    </div>
-                    <Button variant="outline" size="sm" asChild>
-                      <a
-                        href="https://github.com/hatim-alouani/Transcendence"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <Github className="w-4 h-4 mr-2" />
-                        View on GitHub
-                      </a>
-                    </Button>
-                  </CardContent>
-                </Card>
-              </div>
-
-              {/* ChatOCP - Full-Stack Local AI Chatbot */}
-              <div className="scroll-reveal">
-                <Card className="group hover:shadow-xl transition-all duration-300 gradient-frame overflow-hidden">
-                  <div className="relative overflow-hidden">
-                    <img
-                      src="/images/chatocp-logo.png"
-                      alt="ChatOCP - Local AI Chatbot"
-                      className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  </div>
-                  <CardContent className="p-6">
-                    <h3 className="text-xl font-semibold mb-3">ChatOCP</h3>
-                    <p className="text-muted-foreground mb-4 text-pretty">
-                      Full-stack web application featuring a fully local AI chatbot with RAG pipelines implemented using
-                      LangChain and Ollama LLM. Ensures all data processing and model inference happens locally,
-                      preserving privacy and control. Intelligent responses without cloud dependencies.
-                    </p>
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      <Badge>LangChain</Badge>
-                      <Badge>Ollama</Badge>
-                      <Badge>RAG</Badge>
-                      <Badge>Local AI</Badge>
-                      <Badge>Privacy-First</Badge>
-                    </div>
-                    <Button variant="outline" size="sm" asChild>
-                      <a href="https://github.com/hatim-alouani/ChatOCP" target="_blank" rel="noopener noreferrer">
-                        <Github className="w-4 h-4 mr-2" />
-                        View on GitHub
-                      </a>
-                    </Button>
-                  </CardContent>
-                </Card>
-              </div>
             </div>
           </div>
         </div>
