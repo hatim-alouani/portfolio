@@ -312,7 +312,7 @@ export default function Portfolio() {
                 className="text-lg px-8 bg-transparent hover:scale-105 transition-all duration-300 border-primary/30 hover:border-primary hover:bg-primary/10"
                 onClick={() => {
                   const link = document.createElement("a")
-                  link.href = "/hatim_alouani.pdf"
+                  link.href = "./hatim_alouani.pdf"
                   link.download = "hatim_alouani.pdf"
                   document.body.appendChild(link)
                   link.click()
