@@ -795,8 +795,7 @@ export default function Portfolio() {
                     <h3 className="text-xl font-semibold mb-3">Fully Local Chatbot</h3>
                     <p className="text-muted-foreground mb-4 text-pretty">
                       Full-stack web application featuring a fully local AI chatbot with RAG pipelines implemented using
-                      LangChain and Ollama LLM. Ensures all data processing and model inference happens locally,
-                      preserving privacy and control. Intelligent responses without cloud dependencies.
+                      LangChain and Ollama LLM. Ensures all data processing and model inference happens locally.
                     </p>
                     <div className="flex flex-wrap gap-2 mb-4">
                       <Badge>LangChain</Badge>
