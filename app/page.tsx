@@ -982,7 +982,7 @@ export default function Portfolio() {
                     <p className="text-muted-foreground mb-4 text-pretty">
                       Full-stack real-time multiplayer Ping Pong game built with Next.js, Fastify, and TypeScript.
                       Features secure authentication, matchmaking, live gameplay with WebSockets, and a modern SPA
-                      interface. Fully containerized with Docker & DevOps
+                      interface.
                     </p>
                     <div className="flex flex-wrap gap-2 mb-4">
                       <Badge>Next.js</Badge>
