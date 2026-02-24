@@ -265,9 +265,7 @@ export default function Portfolio() {
 
             {/* Description */}
             <p className="text-lg text-muted-foreground mb-6 text-pretty max-w-3xl mx-auto animate-fade-in-up">
-              AI and Software Engineering student at 1337 Coding School | 42 Network, passionate about building scalable
-              systems and intelligent solutions, with a strong focus on Machine Learning, Deep Learning, NLP, and Big
-              Data, complemented by hands-on web development knowledge.
+              AI Software Engineering student at Um6p - 1337 Coding School, passionate about building scalable systems and intelligent solutions, with a strong focus on AI, Machine Learning, Data Science, NLP/LLMs, and Big Data. I combine AI expertise with hands-on full-stack web development experience to create impactful, real-world applications.
             </p>
 
             {/* Age and Location */}
@@ -639,7 +637,7 @@ export default function Portfolio() {
                   <CardContent className="p-6 flex-1 flex flex-col">
                     <div className="flex items-center mb-4">
                       <Server className="w-8 h-8 mr-3 text-red-500 group-hover:scale-110 transition-transform duration-300" />
-                      <h3 className="text-lg font-semibold">DevOps & Tools</h3>
+                      <h3 className="text-lg font-semibold">DevOps & Cloud</h3>
                     </div>
                     <div className="flex flex-wrap gap-2 flex-1">
                       <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
