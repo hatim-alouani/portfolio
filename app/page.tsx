@@ -402,7 +402,7 @@ export default function Portfolio() {
                           <Brain className="w-6 h-6 text-accent" />
                         </div>
                         <div>
-                          <h3 className="text-2xl font-bold text-white mb-1">Bachelor's in Information Systems & AI</h3>
+                          <h3 className="text-2xl font-bold text-white mb-1">Bachelor's degree in Information Systems & AI</h3>
                           <p className="text-lg font-semibold text-white mb-2">
                             Computer Science & Artificial Intelligence
                           </p>
@@ -492,13 +492,13 @@ export default function Portfolio() {
                     </div>
                     <div className="flex flex-wrap gap-2 flex-1">
                       <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
-                        WordPress
+                      NodeJs
                       </Badge>
                       <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
-                        HTML
+                        NextJs
                       </Badge>
                       <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
-                        CSS
+                        TailwindCss
                       </Badge>
                       <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
                         JavaScript
@@ -507,7 +507,7 @@ export default function Portfolio() {
                         TypeScript
                       </Badge>
                       <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
-                        React
+                        FastApi
                       </Badge>
                     </div>
                   </CardContent>
@@ -563,6 +563,9 @@ export default function Portfolio() {
                       </Badge>
                       <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
                         LangChain
+                      </Badge>
+                      <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
+                        HuggingFace
                       </Badge>
                     </div>
                   </CardContent>
@@ -620,7 +623,7 @@ export default function Portfolio() {
                         Cassandra
                       </Badge>
                       <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
-                        HBase
+                        Oracle
                       </Badge>
                       <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
                         MariaDB
@@ -653,6 +656,15 @@ export default function Portfolio() {
                       </Badge>
                       <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
                         Prometheus
+                      </Badge>
+                      <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
+                        ELK Stack
+                      </Badge>
+                      <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
+                        AWS
+                      </Badge>
+                      <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
+                        Oracle
                       </Badge>
                     </div>
                   </CardContent>
@@ -696,7 +708,7 @@ export default function Portfolio() {
                         variant="outline"
                         className="w-fit mt-4 lg:mt-0 border-primary/30 text-primary bg-primary/5"
                       >
-                        Current
+                        Completed
                       </Badge>
                     </div>
                     <p className="text-muted-foreground leading-relaxed mb-4">
@@ -718,6 +730,59 @@ export default function Portfolio() {
                 </Card>
               </div>
 
+              {/* AI Software Engineer Intern at Talio Talent */}
+              <div className="scroll-reveal">
+                <Card className="gradient-frame hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 hover:scale-[1.02] group">
+                  <CardContent className="p-8">
+                    <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6">
+                      <div className="flex items-start gap-4">
+                        <div className="p-3 rounded-full bg-primary/10 border border-primary/20 group-hover:bg-primary/20 transition-colors">
+                          <Brain className="w-6 h-6 text-primary" />
+                        </div>
+                        <div>
+                          <h3 className="text-2xl font-bold text-white mb-1">AI Software Engineer Intern</h3>
+                          <p className="text-lg font-semibold text-white mb-2">Talio Talent</p>
+                          <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                            <Calendar className="w-4 h-4" />
+                            <span>December 2025 - February 2025</span>
+                          </div>
+                        </div>
+                      </div>
+                      <Badge
+                        variant="outline"
+                        className="w-fit mt-4 lg:mt-0 border-primary/30 text-primary bg-primary/5"
+                      >
+                        Completed
+                      </Badge>
+                    </div>
+                    <p className="text-muted-foreground leading-relaxed mb-4">
+                      Build Talio AI Assistant Full-stack web application featuring a fully local AI chatbot for Talio Talent Company, using Next.js, Node.js, Fast API and SQLite. Implemented RAG pipelines with LangChain, Vector Embeddings and Ollama LLM (Qwen 14B) for intelligent responses
+                    </p>
+                    <p className="text-muted-foreground leading-relaxed mb-4">
+                      Designed and implemented automated workflows using n8n, including billing automation, user feedback systems, and dynamic form creation. Integrated APIs and AI assistants to streamline internal operations, improve data collection, boost overall productivity and helped develop taliotalent.com
+                    </p>
+                     
+                    <div className="flex flex-wrap gap-2">
+                      <Badge variant="secondary" className="bg-primary/10 text-white border-primary/20">
+                        Full-Stack Development
+                      </Badge>
+                      <Badge variant="secondary" className="bg-primary/10 text-white border-primary/20">
+                        3D Avatar Integration
+                      </Badge>
+                      <Badge variant="secondary" className="bg-primary/10 text-white border-primary/20">
+                        AI Assistant
+                      </Badge>
+                      <Badge variant="secondary" className="bg-primary/10 text-white border-primary/20">
+                        Automation
+                      </Badge>
+                      <Badge variant="secondary" className="bg-primary/10 text-white border-primary/20">
+                        N8n
+                      </Badge>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+
               {/* Freelance Web Developer */}
               <div className="scroll-reveal">
                 <Card className="gradient-frame hover:shadow-2xl hover:shadow-accent/10 transition-all duration-500 hover:scale-[1.02] group">
@@ -728,11 +793,11 @@ export default function Portfolio() {
                           <Globe className="w-6 h-6 text-accent" />
                         </div>
                         <div>
-                          <h3 className="text-2xl font-bold text-white mb-1">Freelance Web Developer</h3>
-                          <p className="text-lg font-semibold text-white mb-2">Remote</p>
+                          <h3 className="text-2xl font-bold text-white mb-1">Freelance AI & Web Developer</h3>
+                          <p className="text-lg font-semibold text-white mb-2">Sijil Pharma</p>
                           <div className="flex items-center gap-2 text-sm text-muted-foreground">
                             <Calendar className="w-4 h-4" />
-                            <span>May 2024 - Present</span>
+                            <span>December 2025 - Present</span>
                           </div>
                         </div>
                       </div>
@@ -741,27 +806,11 @@ export default function Portfolio() {
                       </Badge>
                     </div>
                     <p className="text-muted-foreground leading-relaxed mb-4">
-                      Developing responsive and modern web applications for clients worldwide, specializing in WordPress
-                      website creation and full-stack development with modern web technologies.
+                      Contributed as part of the team to develop sijilpharma.com using Gatsby.js
                     </p>
                     <div className="flex flex-wrap gap-2">
                       <Badge variant="secondary" className="bg-accent/10 text-white border-accent/20">
-                        WordPress
-                      </Badge>
-                      <Badge variant="secondary" className="bg-accent/10 text-white border-accent/20">
-                        HTML/CSS
-                      </Badge>
-                      <Badge variant="secondary" className="bg-accent/10 text-white border-accent/20">
-                        JavaScript
-                      </Badge>
-                      <Badge variant="secondary" className="bg-accent/10 text-white border-accent/20">
-                        Next.js
-                      </Badge>
-                      <Badge variant="secondary" className="bg-accent/10 text-white border-accent/20">
-                        React
-                      </Badge>
-                      <Badge variant="secondary" className="bg-accent/10 text-white border-accent/20">
-                        Node.js
+                        Gatsby.js
                       </Badge>
                     </div>
                   </CardContent>
