@@ -19,6 +19,7 @@ import {
   GraduationCap,
   Calendar,
   Globe,
+  Bot,
 } from "lucide-react"
 import { useState, useEffect } from "react"
 
@@ -355,11 +356,11 @@ export default function Portfolio() {
                           <Code className="w-6 h-6 text-primary" />
                         </div>
                         <div>
-                          <h3 className="text-2xl font-bold text-white mb-1">1337 Coding School – Common Core</h3>
+                          <h3 className="text-2xl font-bold text-white mb-1">1337 Coding School – 42 Morocco</h3>
                           <p className="text-lg font-semibold text-white mb-2">Software Engineering</p>
                           <div className="flex items-center gap-2 text-sm text-muted-foreground">
                             <Calendar className="w-4 h-4" />
-                            <span>2023 – 2025</span>
+                            <span>2023 – 2026</span>
                           </div>
                         </div>
                       </div>
@@ -367,7 +368,7 @@ export default function Portfolio() {
                         variant="outline"
                         className="w-fit mt-4 lg:mt-0 border-primary/30 text-primary bg-primary/5"
                       >
-                        Completed
+                        Junior Developer Level
                       </Badge>
                     </div>
                     <p className="text-muted-foreground leading-relaxed">
@@ -390,7 +391,7 @@ export default function Portfolio() {
                 </Card>
               </div>
 
-              {/* Bachelor's Degree */}
+              {/* Master's Degree */}
               <div className="scroll-reveal">
                 <Card className="gradient-frame hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 hover:scale-[1.02] group">
                   <CardContent className="p-8">
@@ -400,42 +401,83 @@ export default function Portfolio() {
                           <Brain className="w-6 h-6 text-accent" />
                         </div>
                         <div>
-                          <h3 className="text-2xl font-bold text-white mb-1">Bachelor's degree in Information Systems & AI</h3>
-                          <p className="text-lg font-semibold text-white mb-2">
-                            Computer Science & Artificial Intelligence
-                          </p>
+                          <h3 className="text-2xl font-bold text-white mb-1">
+                            University of Khouribga – Excellence Master's Degree (M1)
+                          </h3>
+                          <p className="text-lg font-semibold text-white mb-2">AI Engineer</p>
                           <div className="flex items-center gap-2 text-sm text-muted-foreground">
                             <Calendar className="w-4 h-4" />
-                            <span>2021 – 2025</span>
+                            <span>2025 – 2026</span>
                           </div>
                         </div>
                       </div>
                       <Badge variant="outline" className="w-fit mt-4 lg:mt-0 border-accent/30 text-accent bg-accent/5">
-                        Completed
+                        In Progress
                       </Badge>
                     </div>
                     <p className="text-muted-foreground leading-relaxed">
-                      Specialized in Computer Science, Artificial Intelligence, Big Data, and Advanced Data Analytics
-                      with comprehensive theoretical and practical knowledge in machine learning and data science.
+                      Excellence Master's program specialized in Information Systems, Artificial Intelligence, and Data
+                      Science, with comprehensive theoretical and practical knowledge in machine learning and data
+                      engineering.
                     </p>
                     <div className="flex flex-wrap gap-2 mt-4">
+                      <Badge variant="secondary" className="bg-accent/10 text-white border-accent/20">
+                        Information Systems
+                      </Badge>
                       <Badge variant="secondary" className="bg-accent/10 text-white border-accent/20">
                         Artificial Intelligence
                       </Badge>
                       <Badge variant="secondary" className="bg-accent/10 text-white border-accent/20">
-                        Big Data
+                        Data Science
                       </Badge>
-                      <Badge variant="secondary" className="bg-accent/10 text-white border-accent/20">
-                        Data Analytics
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+
+              {/* 42 Paris - RNCP 7 */}
+              <div className="scroll-reveal">
+                <Card className="gradient-frame hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 hover:scale-[1.02] group">
+                  <CardContent className="p-8">
+                    <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6">
+                      <div className="flex items-start gap-4">
+                        <div className="p-3 rounded-full bg-primary/10 border border-primary/20 group-hover:bg-primary/20 transition-colors">
+                          <GraduationCap className="w-6 h-6 text-primary" />
+                        </div>
+                        <div>
+                          <h3 className="text-2xl font-bold text-white mb-1">42 Paris – RNCP 7</h3>
+                          <p className="text-lg font-semibold text-white mb-2">
+                            Senior AI Software Engineer & Digital Technology Architect
+                          </p>
+                          <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                            <Calendar className="w-4 h-4" />
+                            <span>2026 – 2027</span>
+                          </div>
+                        </div>
+                      </div>
+                      <Badge
+                        variant="outline"
+                        className="w-fit mt-4 lg:mt-0 border-primary/30 text-primary bg-primary/5"
+                      >
+                        Upcoming
                       </Badge>
-                      <Badge variant="secondary" className="bg-accent/10 text-white border-accent/20">
-                        Mathematics
+                    </div>
+                    <p className="text-muted-foreground leading-relaxed">
+                      Advanced studies in Software Engineering, Data Science, and Artificial Intelligence, covering
+                      system programming, algorithms, software architecture, and full-stack development.
+                    </p>
+                    <div className="flex flex-wrap gap-2 mt-4">
+                      <Badge variant="secondary" className="bg-primary/10 text-white border-primary/20">
+                        Software Architecture
                       </Badge>
-                      <Badge variant="secondary" className="bg-accent/10 text-white border-accent/20">
-                        Physics
+                      <Badge variant="secondary" className="bg-primary/10 text-white border-primary/20">
+                        System Programming
                       </Badge>
-                      <Badge variant="secondary" className="bg-accent/10 text-white border-accent/20">
-                        Scientific Method
+                      <Badge variant="secondary" className="bg-primary/10 text-white border-primary/20">
+                        Algorithms
+                      </Badge>
+                      <Badge variant="secondary" className="bg-primary/10 text-white border-primary/20">
+                        Fullstack Development
                       </Badge>
                     </div>
                   </CardContent>
@@ -454,13 +496,13 @@ export default function Portfolio() {
             </h2>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {/* Programming Languages */}
+              {/* Programming & Scripting */}
               <div className="scroll-reveal">
                 <Card className="group hover:shadow-xl hover:scale-105 transition-all duration-300 border-l-4 border-l-primary/50 gradient-frame min-h-[200px] flex flex-col">
                   <CardContent className="p-6 flex-1 flex flex-col">
                     <div className="flex items-center mb-4">
                       <Code className="w-8 h-8 mr-3 text-primary group-hover:scale-110 transition-transform duration-300" />
-                      <h3 className="text-lg font-semibold">Programming Languages</h3>
+                      <h3 className="text-lg font-semibold">Programming & Scripting</h3>
                     </div>
                     <div className="flex flex-wrap gap-2 flex-1">
                       <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
@@ -473,57 +515,28 @@ export default function Portfolio() {
                         Python
                       </Badge>
                       <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
+                        JavaScript/TypeScript
+                      </Badge>
+                      <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
                         Shell Scripting
                       </Badge>
-                    </div>
-                  </CardContent>
-                </Card>
-              </div>
-
-              {/* Web Development */}
-              <div className="scroll-reveal">
-                <Card className="group hover:shadow-xl hover:scale-105 transition-all duration-300 border-l-4 border-l-cyan-500/50 gradient-frame min-h-[200px] flex flex-col">
-                  <CardContent className="p-6 flex-1 flex flex-col">
-                    <div className="flex items-center mb-4">
-                      <Globe className="w-8 h-8 mr-3 text-cyan-500 group-hover:scale-110 transition-transform duration-300" />
-                      <h3 className="text-lg font-semibold">Web Development</h3>
-                    </div>
-                    <div className="flex flex-wrap gap-2 flex-1">
                       <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
-                      NodeJs
-                      </Badge>
-                      <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
-                        NextJs
-                      </Badge>
-                      <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
-                        TailwindCss
-                      </Badge>
-                      <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
-                        JavaScript
-                      </Badge>
-                      <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
-                        TypeScript
-                      </Badge>
-                      <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
-                        FastApi
+                        SQL
                       </Badge>
                     </div>
                   </CardContent>
                 </Card>
               </div>
 
-              {/* AI & Machine Learning */}
+              {/* Data Science */}
               <div className="scroll-reveal">
                 <Card className="group hover:shadow-xl hover:scale-105 transition-all duration-300 border-l-4 border-l-blue-500/50 gradient-frame min-h-[200px] flex flex-col">
                   <CardContent className="p-6 flex-1 flex flex-col">
                     <div className="flex items-center mb-4">
                       <Brain className="w-8 h-8 mr-3 text-blue-500 group-hover:scale-110 transition-transform duration-300" />
-                      <h3 className="text-lg font-semibold">AI & Machine Learning</h3>
+                      <h3 className="text-lg font-semibold">Data Science</h3>
                     </div>
                     <div className="flex flex-wrap gap-2 flex-1">
-                      <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
-                        TensorFlow
-                      </Badge>
                       <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
                         Scikit-learn
                       </Badge>
@@ -532,6 +545,15 @@ export default function Portfolio() {
                       </Badge>
                       <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
                         Matplotlib
+                      </Badge>
+                      <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
+                        TensorFlow
+                      </Badge>
+                      <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
+                        Keras
+                      </Badge>
+                      <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
+                        PyTorch
                       </Badge>
                     </div>
                   </CardContent>
@@ -554,45 +576,80 @@ export default function Portfolio() {
                         NLTK
                       </Badge>
                       <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
-                        Ollama
+                        LLaMA
+                      </Badge>
+                      <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
+                        OpenAI
+                      </Badge>
+                      <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
+                        Hugging Face
                       </Badge>
                       <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
                         RAG
                       </Badge>
                       <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
+                        FileSearch
+                      </Badge>
+                      <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
                         LangChain
                       </Badge>
                       <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
-                        HuggingFace
+                        Claude Code
                       </Badge>
                     </div>
                   </CardContent>
                 </Card>
               </div>
 
-              {/* Big Data & Analytics */}
+              {/* AI & Automation */}
               <div className="scroll-reveal">
-                <Card className="group hover:shadow-xl hover:scale-105 transition-all duration-300 border-l-4 border-l-orange-500/50 gradient-frame min-h-[200px] flex flex-col">
+                <Card className="group hover:shadow-xl hover:scale-105 transition-all duration-300 border-l-4 border-l-sky-500/50 gradient-frame min-h-[200px] flex flex-col">
                   <CardContent className="p-6 flex-1 flex flex-col">
                     <div className="flex items-center mb-4">
-                      <Server className="w-8 h-8 mr-3 text-orange-500 group-hover:scale-110 transition-transform duration-300" />
-                      <h3 className="text-lg font-semibold">Big Data & Analytics</h3>
+                      <Bot className="w-8 h-8 mr-3 text-sky-500 group-hover:scale-110 transition-transform duration-300" />
+                      <h3 className="text-lg font-semibold">AI & Automation</h3>
                     </div>
                     <div className="flex flex-wrap gap-2 flex-1">
                       <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
-                        Spark
+                        AI Agents
                       </Badge>
                       <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
-                        Hadoop
+                        AI Automation Pipelines
                       </Badge>
                       <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
-                        Kafka
+                        n8n Orchestration
+                      </Badge>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+
+              {/* Web Development */}
+              <div className="scroll-reveal">
+                <Card className="group hover:shadow-xl hover:scale-105 transition-all duration-300 border-l-4 border-l-cyan-500/50 gradient-frame min-h-[200px] flex flex-col">
+                  <CardContent className="p-6 flex-1 flex flex-col">
+                    <div className="flex items-center mb-4">
+                      <Globe className="w-8 h-8 mr-3 text-cyan-500 group-hover:scale-110 transition-transform duration-300" />
+                      <h3 className="text-lg font-semibold">Web Development</h3>
+                    </div>
+                    <div className="flex flex-wrap gap-2 flex-1">
+                      <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
+                        React.js
                       </Badge>
                       <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
-                        PySpark
+                        Next.js
                       </Badge>
                       <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
-                        Power BI
+                        Tailwind CSS
+                      </Badge>
+                      <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
+                        Node.js
+                      </Badge>
+                      <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
+                        WordPress
+                      </Badge>
+                      <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
+                        Nginx
                       </Badge>
                     </div>
                   </CardContent>
@@ -609,29 +666,32 @@ export default function Portfolio() {
                     </div>
                     <div className="flex flex-wrap gap-2 flex-1">
                       <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
-                        PostgreSQL
-                      </Badge>
-                      <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
                         MySQL
                       </Badge>
                       <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
-                        Redis
+                        PostgreSQL
+                      </Badge>
+                      <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
+                        MariaDB
+                      </Badge>
+                      <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
+                        SQLite
                       </Badge>
                       <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
                         Cassandra
                       </Badge>
                       <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
-                        Oracle
+                        HBase
                       </Badge>
                       <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
-                        MariaDB
+                        Oracle DB
                       </Badge>
                     </div>
                   </CardContent>
                 </Card>
               </div>
 
-              {/* DevOps & Tools */}
+              {/* DevOps & Cloud */}
               <div className="scroll-reveal">
                 <Card className="group hover:shadow-xl hover:scale-105 transition-all duration-300 border-l-4 border-l-red-500/50 gradient-frame min-h-[200px] flex flex-col">
                   <CardContent className="p-6 flex-1 flex flex-col">
@@ -647,9 +707,6 @@ export default function Portfolio() {
                         Docker
                       </Badge>
                       <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
-                        Nginx
-                      </Badge>
-                      <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
                         Grafana
                       </Badge>
                       <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
@@ -662,7 +719,30 @@ export default function Portfolio() {
                         AWS
                       </Badge>
                       <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
-                        Oracle
+                        Oracle Cloud
+                      </Badge>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+
+              {/* Big Data */}
+              <div className="scroll-reveal">
+                <Card className="group hover:shadow-xl hover:scale-105 transition-all duration-300 border-l-4 border-l-orange-500/50 gradient-frame min-h-[200px] flex flex-col">
+                  <CardContent className="p-6 flex-1 flex flex-col">
+                    <div className="flex items-center mb-4">
+                      <Server className="w-8 h-8 mr-3 text-orange-500 group-hover:scale-110 transition-transform duration-300" />
+                      <h3 className="text-lg font-semibold">Big Data</h3>
+                    </div>
+                    <div className="flex flex-wrap gap-2 flex-1">
+                      <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
+                        Spark
+                      </Badge>
+                      <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
+                        Hadoop
+                      </Badge>
+                      <Badge className="hover:bg-primary/20 transition-colors duration-200 cursor-default bg-secondary text-secondary-foreground min-w-[80px] text-center">
+                        Kafka
                       </Badge>
                     </div>
                   </CardContent>
@@ -684,44 +764,41 @@ export default function Portfolio() {
             </h2>
 
             <div className="space-y-8">
-              {/* AI Software Engineer Intern at A2XCORP */}
+              {/* AI Web Developer at Sijil Pharma */}
               <div className="scroll-reveal">
-                <Card className="gradient-frame hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 hover:scale-[1.02] group">
+                <Card className="gradient-frame hover:shadow-2xl hover:shadow-accent/10 transition-all duration-500 hover:scale-[1.02] group">
                   <CardContent className="p-8">
                     <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6">
                       <div className="flex items-start gap-4">
-                        <div className="p-3 rounded-full bg-primary/10 border border-primary/20 group-hover:bg-primary/20 transition-colors">
-                          <Brain className="w-6 h-6 text-primary" />
+                        <div className="p-3 rounded-full bg-accent/10 border border-accent/20 group-hover:bg-accent/20 transition-colors">
+                          <Globe className="w-6 h-6 text-accent" />
                         </div>
                         <div>
-                          <h3 className="text-2xl font-bold text-white mb-1">AI Software Engineer Intern</h3>
-                          <p className="text-lg font-semibold text-white mb-2">A2XCORP</p>
+                          <h3 className="text-2xl font-bold text-white mb-1">AI Web Developer – Freelance</h3>
+                          <p className="text-lg font-semibold text-white mb-2">Sijil Pharma</p>
                           <div className="flex items-center gap-2 text-sm text-muted-foreground">
                             <Calendar className="w-4 h-4" />
-                            <span>October 2025 - December 2025</span>
+                            <span>July 2025 - October 2025</span>
                           </div>
                         </div>
                       </div>
-                      <Badge
-                        variant="outline"
-                        className="w-fit mt-4 lg:mt-0 border-primary/30 text-primary bg-primary/5"
-                      >
+                      <Badge variant="outline" className="w-fit mt-4 lg:mt-0 border-accent/30 text-accent bg-accent/5">
                         Completed
                       </Badge>
                     </div>
                     <p className="text-muted-foreground leading-relaxed mb-4">
-                      Built AI-AUDIT, a full-stack web application featuring a 3D avatar chatbot that functions as an AI
-                      assistant for enterprise auditing solutions.
+                      Built the Sijil Pharma AI Assistant, and developed a Deep Learning OCR model for image-to-text
+                      extraction.
                     </p>
                     <div className="flex flex-wrap gap-2">
-                      <Badge variant="secondary" className="bg-primary/10 text-white border-primary/20">
-                        Full-Stack Development
-                      </Badge>
-                      <Badge variant="secondary" className="bg-primary/10 text-white border-primary/20">
-                        3D Avatar Integration
-                      </Badge>
-                      <Badge variant="secondary" className="bg-primary/10 text-white border-primary/20">
+                      <Badge variant="secondary" className="bg-accent/10 text-white border-accent/20">
                         AI Assistant
+                      </Badge>
+                      <Badge variant="secondary" className="bg-accent/10 text-white border-accent/20">
+                        Deep Learning
+                      </Badge>
+                      <Badge variant="secondary" className="bg-accent/10 text-white border-accent/20">
+                        OCR
                       </Badge>
                     </div>
                   </CardContent>
@@ -742,7 +819,7 @@ export default function Portfolio() {
                           <p className="text-lg font-semibold text-white mb-2">Talio Talent</p>
                           <div className="flex items-center gap-2 text-sm text-muted-foreground">
                             <Calendar className="w-4 h-4" />
-                            <span>December 2025 - February 2025</span>
+                            <span>October 2025 - March 2026</span>
                           </div>
                         </div>
                       </div>
@@ -754,61 +831,98 @@ export default function Portfolio() {
                       </Badge>
                     </div>
                     <p className="text-muted-foreground leading-relaxed mb-4">
-                      Build Talio AI Assistant Full-stack web application featuring a fully local AI chatbot for Talio Talent Company, using Next.js, Node.js, Fast API and SQLite. Implemented RAG pipelines with LangChain, Vector Embeddings and Ollama LLM (Qwen 14B) for intelligent responses
+                      <strong className="text-white">AI-AUDIT:</strong> Developed a 3D avatar-based AI chatbot and
+                      virtual assistant using UNITH, Next.js, Node.js, PostgreSQL, and OpenAI.
                     </p>
                     <p className="text-muted-foreground leading-relaxed mb-4">
-                      Designed and implemented automated workflows using n8n, including billing automation, user feedback systems, and dynamic form creation. Integrated APIs and AI assistants to streamline internal operations, improve data collection, boost overall productivity and helped develop taliotalent.com
+                      <strong className="text-white">Talio AI Assistant:</strong> Full-stack AI assistant using
+                      Next.js, Node.js, FastAPI, and SQLite. Implemented a fully local RAG pipeline with LangChain,
+                      vector embeddings, and Ollama (Qwen 14B).
                     </p>
-                     
+                    <p className="text-muted-foreground leading-relaxed mb-4">
+                      <strong className="text-white">N8n Automation:</strong> Designed and implemented automated
+                      workflows using n8n for billing automation, user feedback collection, dynamic form generation,
+                      and internal process optimization. Integrated APIs and AI assistants to streamline operations,
+                      improve data collection, and increase productivity.
+                    </p>
                     <div className="flex flex-wrap gap-2">
-                      <Badge variant="secondary" className="bg-primary/10 text-white border-primary/20">
-                        Full-Stack Development
-                      </Badge>
                       <Badge variant="secondary" className="bg-primary/10 text-white border-primary/20">
                         3D Avatar Integration
                       </Badge>
                       <Badge variant="secondary" className="bg-primary/10 text-white border-primary/20">
-                        AI Assistant
+                        RAG
                       </Badge>
                       <Badge variant="secondary" className="bg-primary/10 text-white border-primary/20">
-                        Automation
+                        LangChain
                       </Badge>
                       <Badge variant="secondary" className="bg-primary/10 text-white border-primary/20">
-                        N8n
+                        Ollama
+                      </Badge>
+                      <Badge variant="secondary" className="bg-primary/10 text-white border-primary/20">
+                        N8n Automation
                       </Badge>
                     </div>
                   </CardContent>
                 </Card>
               </div>
 
-              {/* Freelance Web Developer */}
+              {/* AI Engineer Intern at IG GREEN TECH */}
               <div className="scroll-reveal">
-                <Card className="gradient-frame hover:shadow-2xl hover:shadow-accent/10 transition-all duration-500 hover:scale-[1.02] group">
+                <Card className="gradient-frame hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 hover:scale-[1.02] group">
                   <CardContent className="p-8">
                     <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6">
                       <div className="flex items-start gap-4">
-                        <div className="p-3 rounded-full bg-accent/10 border border-accent/20 group-hover:bg-accent/20 transition-colors">
-                          <Globe className="w-6 h-6 text-accent" />
+                        <div className="p-3 rounded-full bg-primary/10 border border-primary/20 group-hover:bg-primary/20 transition-colors">
+                          <Brain className="w-6 h-6 text-primary" />
                         </div>
                         <div>
-                          <h3 className="text-2xl font-bold text-white mb-1">Freelance AI & Web Developer</h3>
-                          <p className="text-lg font-semibold text-white mb-2">Sijil Pharma</p>
+                          <h3 className="text-2xl font-bold text-white mb-1">AI Engineer Intern</h3>
+                          <p className="text-lg font-semibold text-white mb-2">IG GREEN TECH</p>
                           <div className="flex items-center gap-2 text-sm text-muted-foreground">
                             <Calendar className="w-4 h-4" />
-                            <span>December 2025 - Present</span>
+                            <span>February 2026 - July 2026</span>
                           </div>
                         </div>
                       </div>
-                      <Badge variant="outline" className="w-fit mt-4 lg:mt-0 border-accent/30 text-accent bg-accent/5">
-                        Ongoing
+                      <Badge
+                        variant="outline"
+                        className="w-fit mt-4 lg:mt-0 border-primary/30 text-primary bg-primary/5"
+                      >
+                        Completed
                       </Badge>
                     </div>
                     <p className="text-muted-foreground leading-relaxed mb-4">
-                      Contributed as part of the team to develop sijilpharma.com using Gatsby.js
+                      <strong className="text-white">Natura AI:</strong> Built an AI-powered platform for automated
+                      carbon project feasibility analysis, combining FastAPI, rule-based scoring, confidence
+                      evaluation, and audit-ready reporting. Developed a local multiagent AI assistant using
+                      LangChain, RAG, BM25, E5 Embeddings, Cross-Encoder, and Ollama for project analysis, methodology
+                      comparison, PDD review, and document generation.
+                    </p>
+                    <p className="text-muted-foreground leading-relaxed mb-4">
+                      <strong className="text-white">Aldric:</strong> Developed an enterprise AI content automation
+                      platform for the insurance industry using Next.js, TypeScript, Supabase, and n8n. Built
+                      AI-powered knowledge management and editorial workflows using AI Agents, RAG, LangChain,
+                      pgvector, and vector search to process trusted documents, generate compliant content, and
+                      automate marketing workflows.
                     </p>
                     <div className="flex flex-wrap gap-2">
-                      <Badge variant="secondary" className="bg-accent/10 text-white border-accent/20">
-                        Gatsby.js
+                      <Badge variant="secondary" className="bg-primary/10 text-white border-primary/20">
+                        AI Agents
+                      </Badge>
+                      <Badge variant="secondary" className="bg-primary/10 text-white border-primary/20">
+                        RAG
+                      </Badge>
+                      <Badge variant="secondary" className="bg-primary/10 text-white border-primary/20">
+                        LangChain
+                      </Badge>
+                      <Badge variant="secondary" className="bg-primary/10 text-white border-primary/20">
+                        FastAPI
+                      </Badge>
+                      <Badge variant="secondary" className="bg-primary/10 text-white border-primary/20">
+                        pgvector
+                      </Badge>
+                      <Badge variant="secondary" className="bg-primary/10 text-white border-primary/20">
+                        n8n
                       </Badge>
                     </div>
                   </CardContent>
@@ -852,7 +966,7 @@ export default function Portfolio() {
                       <Badge>Privacy-First</Badge>
                     </div>
                     <Button variant="outline" size="sm" asChild>
-                      <a href="https://github.com/hatim-alouani/ChatOCP" target="_blank" rel="noopener noreferrer">
+                      <a href="https://github.com/hatim-alouani/chatocp" target="_blank" rel="noopener noreferrer">
                         <Github className="w-4 h-4 mr-2" />
                         View on GitHub
                       </a>
@@ -1040,7 +1154,7 @@ export default function Portfolio() {
                     </div>
                     <Button variant="outline" size="sm" asChild>
                       <a
-                        href="https://github.com/hatim-alouani/Transcendence"
+                        href="https://github.com/hatim-alouani/Transcendence-42Cursus"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
@@ -1191,6 +1305,40 @@ export default function Portfolio() {
                 </Card>
               </div>
 
+              {/* AfriMedAI */}
+              <div className="scroll-reveal">
+                <Card className="group hover:shadow-xl transition-all duration-300 gradient-frame overflow-hidden">
+                  <div className="relative overflow-hidden">
+                    <img
+                      src="/images/afrimedai.jpeg"
+                      alt="AfriMedAI"
+                      className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  </div>
+                  <CardContent className="p-6">
+                    <h3 className="text-xl font-semibold mb-3">AfriMedAI</h3>
+                    <p className="text-muted-foreground mb-4 text-pretty">
+                      Contributed to an AI-powered medical diagnosis platform improving healthcare accessibility across
+                      Africa, leveraging Machine Learning, blockchain-secured medical records, and cloud infrastructure
+                      for fast, affordable medical image analysis.
+                    </p>
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      <Badge>Machine Learning</Badge>
+                      <Badge>Blockchain</Badge>
+                      <Badge>Cloud</Badge>
+                      <Badge>Healthcare</Badge>
+                    </div>
+                    <Button variant="outline" size="sm" asChild>
+                      <a href="https://github.com/hatim-alouani/BrainModel" target="_blank" rel="noopener noreferrer">
+                        <Github className="w-4 h-4 mr-2" />
+                        View on GitHub
+                      </a>
+                    </Button>
+                  </CardContent>
+                </Card>
+              </div>
+
             </div>
           </div>
         </div>
@@ -1247,6 +1395,59 @@ export default function Portfolio() {
                     B2 level English proficiency certification achieved through Rosetta Stone's comprehensive language
                     learning program. Completed during my education at FP Khouribga, demonstrating advanced English
                     communication skills.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="group hover:shadow-lg transition-shadow gradient-frame">
+                <CardContent className="p-6">
+                  <div className="relative overflow-hidden rounded-lg mb-4">
+                    <img
+                      src="/images/anthropic.jpeg"
+                      alt="Claude Code in Action Certificate"
+                      className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3">Claude Code in Action – Anthropic</h3>
+                  <p className="text-muted-foreground mb-4 text-pretty">
+                    Certification demonstrating hands-on proficiency using Claude Code as an AI coding agent for
+                    real-world software engineering workflows.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="group hover:shadow-lg transition-shadow gradient-frame">
+                <CardContent className="p-6">
+                  <div className="relative overflow-hidden rounded-lg mb-4">
+                    <img
+                      src="/images/cisco.jpeg"
+                      alt="Introduction to Data Science Certificate"
+                      className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3">Introduction to Data Science – Cisco</h3>
+                  <p className="text-muted-foreground mb-4 text-pretty">
+                    Foundational certification covering core data science concepts, data analysis techniques, and
+                    machine learning fundamentals.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="group hover:shadow-lg transition-shadow gradient-frame">
+                <CardContent className="p-6">
+                  <div className="relative overflow-hidden rounded-lg mb-4">
+                    <img
+                      src="/images/oracle.jpeg"
+                      alt="Oracle Cloud Infrastructure 2025 AI Foundations Associate Certificate"
+                      className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3">
+                    Oracle Cloud Infrastructure 2025 AI Foundations Associate – Oracle
+                  </h3>
+                  <p className="text-muted-foreground mb-4 text-pretty">
+                    Certification validating foundational knowledge of Oracle Cloud Infrastructure's AI services and
+                    machine learning capabilities.
                   </p>
                 </CardContent>
               </Card>
