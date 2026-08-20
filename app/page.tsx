@@ -266,7 +266,7 @@ export default function Portfolio() {
 
             {/* Description */}
             <p className="text-lg text-muted-foreground mb-6 text-pretty max-w-3xl mx-auto animate-fade-in-up">
-              AI Software Engineering student at Um6p - 1337 Coding School, passionate about building scalable systems and intelligent solutions, with a strong focus on AI, Machine Learning, Data Science, NLP/LLMs, and Big Data. I combine AI expertise with hands-on full-stack web development experience to create impactful, real-world applications.
+              AI Software Engineering student at 42 Paris, passionate about building scalable systems and intelligent solutions, with a strong focus on AI, Machine Learning, Data Science, NLP/LLMs, and Big Data. I combine AI expertise with hands-on full-stack web development experience to create impactful, real-world applications.
             </p>
 
             {/* Age and Location */}
