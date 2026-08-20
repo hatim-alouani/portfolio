@@ -346,6 +346,52 @@ export default function Portfolio() {
             </h2>
 
             <div className="space-y-8">
+              {/* DEUST - FST Beni Mellal */}
+              <div className="scroll-reveal">
+                <Card className="gradient-frame hover:shadow-2xl hover:shadow-accent/10 transition-all duration-500 hover:scale-[1.02] group">
+                  <CardContent className="p-8">
+                    <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6">
+                      <div className="flex items-start gap-4">
+                        <div className="p-3 rounded-full bg-accent/10 border border-accent/20 group-hover:bg-accent/20 transition-colors">
+                          <GraduationCap className="w-6 h-6 text-accent" />
+                        </div>
+                        <div>
+                          <h3 className="text-2xl font-bold text-white mb-1">
+                            Diploma of Scientific and Technical University Studies (DEUST)
+                          </h3>
+                          <p className="text-lg font-semibold text-white mb-2">FST Beni Mellal</p>
+                          <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                            <Calendar className="w-4 h-4" />
+                            <span>2021 – 2024</span>
+                          </div>
+                        </div>
+                      </div>
+                      <Badge variant="outline" className="w-fit mt-4 lg:mt-0 border-accent/30 text-accent bg-accent/5">
+                        Completed
+                      </Badge>
+                    </div>
+                    <p className="text-muted-foreground leading-relaxed">
+                      Specialization in Mathematics, Computer Science, Physics, and Chemistry, building a strong
+                      scientific and technical foundation.
+                    </p>
+                    <div className="flex flex-wrap gap-2 mt-4">
+                      <Badge variant="secondary" className="bg-accent/10 text-white border-accent/20">
+                        Mathematics
+                      </Badge>
+                      <Badge variant="secondary" className="bg-accent/10 text-white border-accent/20">
+                        Computer Science
+                      </Badge>
+                      <Badge variant="secondary" className="bg-accent/10 text-white border-accent/20">
+                        Physics
+                      </Badge>
+                      <Badge variant="secondary" className="bg-accent/10 text-white border-accent/20">
+                        Chemistry
+                      </Badge>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+
               {/* 1337 Coding School */}
               <div className="scroll-reveal">
                 <Card className="gradient-frame hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 hover:scale-[1.02] group">
@@ -385,6 +431,49 @@ export default function Portfolio() {
                       </Badge>
                       <Badge variant="secondary" className="bg-primary/10 text-white border-primary/20">
                         42 Network
+                      </Badge>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+
+              {/* Bachelor's Degree */}
+              <div className="scroll-reveal">
+                <Card className="gradient-frame hover:shadow-2xl hover:shadow-accent/10 transition-all duration-500 hover:scale-[1.02] group">
+                  <CardContent className="p-8">
+                    <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6">
+                      <div className="flex items-start gap-4">
+                        <div className="p-3 rounded-full bg-accent/10 border border-accent/20 group-hover:bg-accent/20 transition-colors">
+                          <Brain className="w-6 h-6 text-accent" />
+                        </div>
+                        <div>
+                          <h3 className="text-2xl font-bold text-white mb-1">
+                            University of Khouribga – Excellence Bachelor's Degree
+                          </h3>
+                          <p className="text-lg font-semibold text-white mb-2">AI Engineer</p>
+                          <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                            <Calendar className="w-4 h-4" />
+                            <span>2024 – 2025</span>
+                          </div>
+                        </div>
+                      </div>
+                      <Badge variant="outline" className="w-fit mt-4 lg:mt-0 border-accent/30 text-accent bg-accent/5">
+                        Completed
+                      </Badge>
+                    </div>
+                    <p className="text-muted-foreground leading-relaxed">
+                      Excellence Bachelor's program specialized in Information Systems, Artificial Intelligence, and
+                      Data Science.
+                    </p>
+                    <div className="flex flex-wrap gap-2 mt-4">
+                      <Badge variant="secondary" className="bg-accent/10 text-white border-accent/20">
+                        Information Systems
+                      </Badge>
+                      <Badge variant="secondary" className="bg-accent/10 text-white border-accent/20">
+                        Artificial Intelligence
+                      </Badge>
+                      <Badge variant="secondary" className="bg-accent/10 text-white border-accent/20">
+                        Data Science
                       </Badge>
                     </div>
                   </CardContent>
@@ -1429,25 +1518,6 @@ export default function Portfolio() {
                   <p className="text-muted-foreground mb-4 text-pretty">
                     Foundational certification covering core data science concepts, data analysis techniques, and
                     machine learning fundamentals.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="group hover:shadow-lg transition-shadow gradient-frame">
-                <CardContent className="p-6">
-                  <div className="relative overflow-hidden rounded-lg mb-4">
-                    <img
-                      src="/images/oracle.jpeg"
-                      alt="Oracle Cloud Infrastructure 2025 AI Foundations Associate Certificate"
-                      className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-3">
-                    Oracle Cloud Infrastructure 2025 AI Foundations Associate – Oracle
-                  </h3>
-                  <p className="text-muted-foreground mb-4 text-pretty">
-                    Certification validating foundational knowledge of Oracle Cloud Infrastructure's AI services and
-                    machine learning capabilities.
                   </p>
                 </CardContent>
               </Card>
